@@ -51,7 +51,7 @@ export function MessageBubble({ message, showSender = true }: MessageBubbleProps
         <div className="flex flex-col items-end gap-1 max-w-[70%]">
           {showSender && (
             <div className="flex items-center gap-2 px-1">
-              <span className="text-xs text-[#636b82]">
+              <span className="text-xs" style={{ color: 'var(--muted)' }}>
                 {formatTime(message.timestamp)}
               </span>
               <span className="text-xs font-semibold text-[#ff8c5a]">You</span>
@@ -104,17 +104,19 @@ export function MessageBubble({ message, showSender = true }: MessageBubbleProps
       <div className="flex flex-col gap-1 max-w-[70%]">
         {showSender && (
           <div className="flex items-baseline gap-2">
-            <span className="text-sm font-semibold text-white">{message.senderName ?? 'Unknown'}</span>
-            <span className="text-xs text-[#636b82]">{formatTime(message.timestamp)}</span>
+            <span className="text-sm font-semibold" style={{ color: 'var(--text)' }}>{message.senderName ?? 'Unknown'}</span>
+            <span className="text-xs" style={{ color: 'var(--muted)' }}>{formatTime(message.timestamp)}</span>
           </div>
         )}
         <div className="flex items-end gap-2">
           <div
-            className={cn(
-              'px-4 py-2.5 rounded-2xl rounded-tl-sm text-sm text-[#eef0f5] shadow-md',
-              'bg-[#1e2333] border border-[#252b3a]/80',
-              'hover:border-[#3d4660]/60 transition-colors duration-150'
-            )}
+            className="px-4 py-2.5 rounded-2xl rounded-tl-sm text-sm shadow-md transition-colors duration-150"
+            style={{
+              background: 'var(--bubble-other-bg)',
+              color: 'var(--bubble-other-text)',
+              border: '1px solid var(--divider)',
+              boxShadow: 'var(--card-shadow)',
+            }}
           >
             {message.attachmentUrl && (
               <img
@@ -126,7 +128,7 @@ export function MessageBubble({ message, showSender = true }: MessageBubbleProps
             {message.content}
           </div>
           {!showSender && (
-            <span className="text-[11px] text-[#636b82] opacity-0 group-hover:opacity-100 transition-opacity self-end mb-1">
+            <span className="text-[11px] opacity-0 group-hover:opacity-100 transition-opacity self-end mb-1" style={{ color: 'var(--muted)' }}>
               {formatTime(message.timestamp)}
             </span>
           )}

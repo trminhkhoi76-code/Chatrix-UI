@@ -39,13 +39,20 @@ export function ChannelSidebar() {
 
   return (
     <aside
-      className="w-60 flex flex-col border-r border-[#1e2333]/60 flex-shrink-0"
-      style={{ background: 'rgba(24, 29, 42, var(--panel-opacity, 0.97))' }}
+      className="w-60 flex flex-col flex-shrink-0"
+      style={{
+        background: 'var(--side-bg)',
+        borderRight: '1px solid var(--divider)',
+        transition: 'background .45s ease',
+      }}
     >
       {/* Server name header */}
-      <div className="h-14 flex items-center justify-between px-4 border-b border-[#1e2333]/60 shadow-sm flex-shrink-0">
+      <div
+        className="h-14 flex items-center justify-between px-4 shadow-sm flex-shrink-0"
+        style={{ borderBottom: '1px solid var(--divider)' }}
+      >
         <div className="flex items-center gap-2">
-          <span className="font-bold text-white truncate">Chatrix</span>
+          <span className="font-bold truncate" style={{ color: 'var(--text)' }}>Chatrix</span>
           <span className="bg-gradient-to-r from-[#ff6b35] to-[#e84393] text-white text-[10px] font-bold px-1.5 py-0.5 rounded-md leading-none tracking-wide">
             PRO
           </span>
@@ -77,9 +84,9 @@ export function ChannelSidebar() {
                   'animate-slide-left',
                   isActive
                     ? 'bg-[#ff6b35]/15 text-[#ff8c5a]'
-                    : 'text-[#636b82] hover:bg-[#1e2333]/80 hover:text-[#9ba3b8]'
+                    : 'hover:bg-[var(--hover-bg)]'
                 )}
-                style={{ animationDelay: `${i * 30}ms` }}
+                style={{ animationDelay: `${i * 30}ms`, color: isActive ? undefined : 'var(--muted)' }}
               >
                 <span className="text-base leading-none w-5 text-center">{icon}</span>
                 <span className="flex-1 truncate font-medium">{room.name}</span>
@@ -103,8 +110,8 @@ export function ChannelSidebar() {
 
       {/* User panel */}
       <div
-        className="h-14 border-t border-[#1e2333]/60 flex items-center px-3 gap-2 flex-shrink-0"
-        style={{ background: 'rgba(13, 15, 21, var(--panel-opacity, 0.97))' }}
+        className="h-14 border-t flex items-center px-3 gap-2 flex-shrink-0"
+        style={{ background: 'var(--panel-bg)', borderColor: 'var(--divider)', transition: 'background .45s ease' }}
       >
         <div className="relative">
           <Avatar name={user?.displayName ?? user?.username ?? 'U'} src={user?.avatarUrl} size="sm" />
@@ -116,7 +123,7 @@ export function ChannelSidebar() {
           />
         </div>
         <div className="flex-1 min-w-0">
-          <p className="text-sm font-semibold text-white truncate leading-tight">
+          <p className="text-sm font-semibold truncate leading-tight" style={{ color: 'var(--text)' }}>
             {user?.displayName ?? user?.username}
           </p>
           <p className={cn('text-xs truncate transition-colors duration-300', wsConnected ? 'text-green-400' : 'text-[#636b82]')}>
@@ -124,13 +131,13 @@ export function ChannelSidebar() {
           </p>
         </div>
         <div className="flex items-center gap-0.5">
-          <button className="p-1.5 text-[#636b82] hover:text-white hover:bg-[#252b3a] rounded-lg transition-all duration-150" title="Microphone">
+          <button className="p-1.5 hover:text-white hover:bg-[#252b3a] rounded-lg transition-all duration-150" style={{ color: 'var(--muted)' }} title="Microphone">
             <Mic size={15} />
           </button>
-          <button className="p-1.5 text-[#636b82] hover:text-white hover:bg-[#252b3a] rounded-lg transition-all duration-150" title="Headphones">
+          <button className="p-1.5 hover:text-white hover:bg-[#252b3a] rounded-lg transition-all duration-150" style={{ color: 'var(--muted)' }} title="Headphones">
             <Headphones size={15} />
           </button>
-          <button className="p-1.5 text-[#636b82] hover:text-white hover:bg-[#252b3a] rounded-lg transition-all duration-150" title="Settings">
+          <button className="p-1.5 hover:text-white hover:bg-[#252b3a] rounded-lg transition-all duration-150" style={{ color: 'var(--muted)' }} title="Settings">
             <Settings size={15} />
           </button>
           <button

@@ -21,10 +21,75 @@
   --color-text-muted: #636b82;
 }
 
-/* ─── Custom properties for opacity control ────────────────────────────── */
+/* ─── Theme CSS variables ────────────────────────────────────────────────── */
+/* midnight (default) */
 :root {
   --panel-opacity: 0.97;
   --sidebar-blur: 12px;
+
+  --app-bg: radial-gradient(1100px 560px at 72% -12%, #28304a 0%, #0e1015 58%);
+  --rail-bg: #13151d;
+  --rail-border: rgba(255,255,255,.05);
+  --side-bg: #171a23;
+  --chat-bg: linear-gradient(180deg, #1a1d27, #15171f);
+  --header-bg: rgba(23,26,35,.92);
+  --panel-bg: #1b1f2b;
+  --bubble-other-bg: #262b39;
+  --bubble-other-text: #e9ebf2;
+  --text: #edeff5;
+  --muted: #8b92a6;
+  --faint: #5b6175;
+  --divider: rgba(255,255,255,.08);
+  --input-bg: #212533;
+  --input-border: rgba(255,255,255,.07);
+  --hover-bg: rgba(255,255,255,.06);
+  --card-shadow: 0 3px 14px rgba(0,0,0,.32);
+  --accent: #ff6a3d;
+  --accent-grad: linear-gradient(135deg, #ff8a5e, #ff6a3d);
+  --glow: 0 6px 22px rgba(255,106,61,.42);
+  --active-bg: rgba(255,106,61,.15);
+}
+
+/* daylight */
+:root[data-theme="daylight"] {
+  --app-bg: #e9ecf4;
+  --rail-bg: #fff7f3;
+  --rail-border: rgba(0,0,0,.06);
+  --side-bg: #ffffff;
+  --chat-bg: linear-gradient(180deg, #fbfcff, #f3f5fb);
+  --header-bg: rgba(255,255,255,.92);
+  --panel-bg: #ffffff;
+  --bubble-other-bg: #ffffff;
+  --bubble-other-text: #1a1d27;
+  --text: #1a1d27;
+  --muted: #6b7180;
+  --faint: #a5abba;
+  --divider: rgba(20,24,40,.08);
+  --input-bg: #f1f3f9;
+  --input-border: rgba(20,24,40,.1);
+  --hover-bg: rgba(20,24,40,.045);
+  --card-shadow: 0 3px 14px rgba(30,40,80,.07);
+}
+
+/* candy / bubble */
+:root[data-theme="candy"] {
+  --app-bg: linear-gradient(155deg, #fff0f6 0%, #eef1ff 52%, #f1fbff 100%);
+  --rail-bg: linear-gradient(180deg, #ff8e53, #ff5e8a);
+  --rail-border: rgba(255,255,255,.3);
+  --side-bg: rgba(255,255,255,.74);
+  --chat-bg: transparent;
+  --header-bg: rgba(255,255,255,.62);
+  --panel-bg: rgba(255,255,255,.92);
+  --bubble-other-bg: #ffffff;
+  --bubble-other-text: #3a3450;
+  --text: #332c4a;
+  --muted: #897fa8;
+  --faint: #b6aecf;
+  --divider: rgba(130,100,170,.14);
+  --input-bg: rgba(255,255,255,.85);
+  --input-border: rgba(150,120,190,.22);
+  --hover-bg: rgba(150,120,190,.1);
+  --card-shadow: 0 6px 20px rgba(150,120,190,.18);
 }
 
 *, *::before, *::after {
@@ -74,6 +139,42 @@ html, body, #root {
   100% { opacity: 1; transform: scale(1); }
 }
 
+/* ─── Reference-matched animations ─────────────────────────────────────── */
+@keyframes msgIn {
+  from { opacity: 0; transform: translateY(11px) scale(.985); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes bob {
+  0%, 100% { transform: translateY(0) rotate(-3deg); }
+  50%       { transform: translateY(-12px) rotate(3deg); }
+}
+
+@keyframes floatIn {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes dotb {
+  0%, 60%, 100% { transform: translateY(0); opacity: .45; }
+  30%           { transform: translateY(-5px); opacity: 1; }
+}
+
+@keyframes growBar {
+  from { transform: scaleY(0); }
+  to   { transform: scaleY(1); }
+}
+
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 6px 18px rgba(255,106,61,.35); }
+  50%       { box-shadow: 0 6px 26px rgba(255,106,61,.6); }
+}
+
 @keyframes pulse-glow {
   0%, 100% { box-shadow: 0 0 0 0 rgba(255, 107, 53, 0.4); }
   50%       { box-shadow: 0 0 0 6px rgba(255, 107, 53, 0); }
@@ -91,10 +192,15 @@ html, body, #root {
 .animate-slide-right { animation: slideInRight 0.3s cubic-bezier(.22,1,.36,1) forwards; }
 .animate-pop-in      { animation: popIn 0.3s cubic-bezier(.22,1,.36,1) forwards; }
 .animate-pulse-glow  { animation: pulse-glow 2s ease-in-out infinite; }
+.animate-bob         { animation: bob 3.4s ease-in-out infinite; }
+.animate-float-in    { animation: floatIn .45s ease both; }
+.animate-glow-pulse  { animation: glowPulse 2s ease-in-out infinite; }
+.animate-grow-bar    { animation: growBar .5s ease both; transform-origin: bottom; }
+.animate-count-up    { animation: countUp .5s ease both; }
 
 /* ─── Message bubble animation ──────────────────────────────────────────── */
 .msg-enter {
-  animation: popIn 0.25s cubic-bezier(.22,1,.36,1) forwards;
+  animation: msgIn .34s cubic-bezier(.2,.8,.2,1) both;
 }
 
 /* ─── Glassmorphism panel ────────────────────────────────────────────────── */

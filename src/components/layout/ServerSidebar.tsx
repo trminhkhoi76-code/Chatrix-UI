@@ -16,7 +16,14 @@ interface ServerSidebarProps {
 
 export function ServerSidebar({ activeServerId, onSelect }: ServerSidebarProps) {
   return (
-    <aside className="w-[68px] bg-[#13151d] flex flex-col items-center py-4 gap-3 border-r border-[#1e2333]/60 flex-shrink-0">
+    <aside
+      className="w-[68px] flex flex-col items-center py-4 gap-3 flex-shrink-0"
+      style={{
+        background: 'var(--rail-bg)',
+        borderRight: '1px solid var(--rail-border)',
+        transition: 'background .45s ease',
+      }}
+    >
       {SERVER_ICONS.map((s, i) => (
         <div key={s.id} className="relative group" style={{ animationDelay: `${i * 50}ms` }}>
           {/* Active indicator */}
@@ -50,10 +57,15 @@ export function ServerSidebar({ activeServerId, onSelect }: ServerSidebarProps) 
       ))}
 
       {/* Separator */}
-      <div className="w-8 h-px bg-[#252b3a] my-1" />
+      <div className="w-8 h-px my-1" style={{ background: 'var(--divider)' }} />
 
       {/* Add server */}
-      <button className="w-12 h-12 rounded-2xl hover:rounded-[14px] flex items-center justify-center text-[#5a6480] hover:text-[#22c55e] border-2 border-dashed border-[#2e3649] hover:border-[#22c55e] hover:bg-[#22c55e]/10 transition-all duration-200">
+      <button
+        className="w-12 h-12 rounded-2xl hover:rounded-[14px] flex items-center justify-center transition-all duration-200"
+        style={{ color: 'var(--muted)', border: '2px dashed var(--input-border)' }}
+        onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = '#22c55e'; (e.currentTarget as HTMLElement).style.borderColor = '#22c55e'; (e.currentTarget as HTMLElement).style.background = 'rgba(34,197,94,.1)'; }}
+        onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = 'var(--muted)'; (e.currentTarget as HTMLElement).style.borderColor = 'var(--input-border)'; (e.currentTarget as HTMLElement).style.background = 'transparent'; }}
+      >
         <Plus size={20} />
       </button>
     </aside>

@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="6f8c00d1-288e-456b-9e20-6f6985e62139"></script>
+
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<style>/* cyrillic-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("ec998e6b-90a4-4e22-bfca-791952f4aafd") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("f2081ea6-7987-49a6-a5d5-a3c2be716a13") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("cc9d7a1a-7cd1-43cb-b79d-298bf4801f19") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("80a24e6f-3cd0-4f66-bcb7-1bd5854ac0f7") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("ec998e6b-90a4-4e22-bfca-791952f4aafd") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("f2081ea6-7987-49a6-a5d5-a3c2be716a13") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("cc9d7a1a-7cd1-43cb-b79d-298bf4801f19") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("80a24e6f-3cd0-4f66-bcb7-1bd5854ac0f7") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("ec998e6b-90a4-4e22-bfca-791952f4aafd") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("f2081ea6-7987-49a6-a5d5-a3c2be716a13") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("cc9d7a1a-7cd1-43cb-b79d-298bf4801f19") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("80a24e6f-3cd0-4f66-bcb7-1bd5854ac0f7") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("ec998e6b-90a4-4e22-bfca-791952f4aafd") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("f2081ea6-7987-49a6-a5d5-a3c2be716a13") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("cc9d7a1a-7cd1-43cb-b79d-298bf4801f19") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("80a24e6f-3cd0-4f66-bcb7-1bd5854ac0f7") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("ec998e6b-90a4-4e22-bfca-791952f4aafd") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("f2081ea6-7987-49a6-a5d5-a3c2be716a13") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("cc9d7a1a-7cd1-43cb-b79d-298bf4801f19") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("80a24e6f-3cd0-4f66-bcb7-1bd5854ac0f7") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+<style>
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;height:100%}
+  ::-webkit-scrollbar{width:9px;height:9px}
+  ::-webkit-scrollbar-thumb{background:rgba(140,140,160,.35);border-radius:9px}
+  ::-webkit-scrollbar-track{background:transparent}
+  @keyframes floatIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  @keyframes growBar{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+  @keyframes drawLine{from{stroke-dashoffset:var(--len)}to{stroke-dashoffset:0}}
+  @keyframes spinDash{from{stroke-dashoffset:var(--c)}to{stroke-dashoffset:var(--off)}}
+  @keyframes countUp{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
+</style>
+</helmet>
+<div style="display:flex;height:100vh;width:100vw;overflow:hidden;font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:{{ t.appBg }};transition:background .45s ease;color:{{ t.text }}">
+
+  <!-- NAV -->
+  <div style="width:236px;flex:none;display:flex;flex-direction:column;background:{{ t.side }};border-right:1px solid {{ t.divider }};transition:background .45s ease;z-index:2">
+    <div style="display:flex;align-items:center;gap:11px;padding:20px 18px 18px">
+      <div style="width:40px;height:40px;border-radius:13px;display:flex;align-items:center;justify-content:center;font:800 19px 'Plus Jakarta Sans';color:#fff;background:{{ t.accentGrad }};box-shadow:{{ t.glow }}">C</div>
+      <div style="line-height:1.15">
+        <div style="font:800 16px 'Plus Jakarta Sans';color:{{ t.text }}">Chatrix</div>
+        <div style="font:700 11px 'Plus Jakarta Sans';letter-spacing:.5px;color:{{ t.accent }}">ADMIN</div>
+      </div>
+    </div>
+
+    <div style="padding:8px 12px;font:800 10.5px 'Plus Jakarta Sans';letter-spacing:1px;color:{{ t.faint }}">MENU</div>
+    <div style="display:flex;flex-direction:column;gap:3px;padding:0 12px">
+      <sc-for list="{{ navItems }}" as="n" hint-placeholder-count="3">
+        <button onclick="{{ n.onClick }}" style="{{ n.style }}" style-hover="background:{{ t.hover }}">
+          <span style="display:flex;width:20px;justify-content:center" innerhtml="{{ n.icon }}"></span>
+          <span style="flex:1;text-align:left">{{ n.label }}</span>
+          <sc-if value="{{ n.badge }}" hint-placeholder-val="{{ false }}">
+            <span style="font:800 10px 'Plus Jakarta Sans';background:#e8493f;color:#fff;border-radius:20px;padding:2px 7px">{{ n.badge }}</span>
+          </sc-if>
+        </button>
+      </sc-for>
+    </div>
+
+    <div style="padding:18px 12px 8px;font:800 10.5px 'Plus Jakarta Sans';letter-spacing:1px;color:{{ t.faint }}">GENERAL</div>
+    <div style="display:flex;flex-direction:column;gap:3px;padding:0 12px">
+      <sc-for list="{{ navGeneral }}" as="n" hint-placeholder-count="2">
+        <button onclick="{{ n.onClick }}" style="{{ n.style }}" style-hover="background:{{ t.hover }}">
+          <span style="display:flex;width:20px;justify-content:center" innerhtml="{{ n.icon }}"></span>
+          <span style="flex:1;text-align:left">{{ n.label }}</span>
+        </button>
+      </sc-for>
+    </div>
+
+    <span style="flex:1"></span>
+    <div style="margin:12px;padding:15px;border-radius:16px;background:{{ t.accentGrad }};box-shadow:{{ t.glow }};color:#fff">
+      <div style="font:800 14px 'Plus Jakarta Sans';margin-bottom:3px">All systems green</div>
+      <div style="font:600 12px 'Plus Jakarta Sans';opacity:.85;line-height:1.4">Uptime 99.98% · 0 incidents this week</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px;padding:12px 16px;border-top:1px solid {{ t.divider }}">
+      <div style="width:36px;height:36px;border-radius:11px;display:flex;align-items:center;justify-content:center;font:800 14px 'Plus Jakarta Sans';color:#fff;background:{{ t.accentGrad }}">M</div>
+      <div style="flex:1;min-width:0">
+        <div style="font:700 13px 'Plus Jakarta Sans';color:{{ t.text }};white-space:nowrap;overflow:hidden;text-overflow:ellipsis">mkt-76</div>
+        <div style="font:600 11px 'Plus Jakarta Sans';color:{{ t.muted }}">Super Admin</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <div style="flex:1;display:flex;flex-direction:column;min-width:0">
+    <!-- topbar -->
+    <div style="height:70px;flex:none;display:flex;align-items:center;gap:14px;padding:0 26px;border-bottom:1px solid {{ t.divider }};background:{{ t.header }};backdrop-filter:blur(14px);transition:background .45s ease;z-index:1">
+      <div>
+        <div style="font:800 19px 'Plus Jakarta Sans';color:{{ t.text }}">{{ viewTitle }}</div>
+        <div style="font:600 12.5px 'Plus Jakarta Sans';color:{{ t.muted }}">{{ viewSub }}</div>
+      </div>
+      <span style="flex:1"></span>
+      <div style="display:flex;align-items:center;gap:7px;background:{{ t.input }};border:1px solid {{ t.inputBorder }};border-radius:11px;padding:9px 13px;width:200px">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" style="color:{{ t.faint }}"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3-3"></path></svg>
+        <span style="font:600 13px 'Plus Jakarta Sans';color:{{ t.faint }}">Search anything…</span>
+      </div>
+      <div style="display:flex;gap:3px;background:{{ t.input }};border:1px solid {{ t.inputBorder }};border-radius:12px;padding:3px">
+        <sc-for list="{{ rangeBtns }}" as="r" hint-placeholder-count="3">
+          <button onclick="{{ r.onClick }}" style="{{ r.style }}">{{ r.label }}</button>
+        </sc-for>
+      </div>
+      <div style="display:flex;gap:3px;background:{{ t.input }};border:1px solid {{ t.inputBorder }};border-radius:12px;padding:3px">
+        <sc-for list="{{ themeBtns }}" as="b" hint-placeholder-count="3">
+          <button onclick="{{ b.onClick }}" title="{{ b.label }}" style="{{ b.style }}">{{ b.icon }}</button>
+        </sc-for>
+      </div>
+      <button style="position:relative;border:none;background:{{ t.input }};border:1px solid {{ t.inputBorder }};cursor:pointer;width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;color:{{ t.muted }}" style-hover="background:{{ t.hover }}">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9a6 6 0 0 1 12 0c0 5 2 6 2 6H4s2-1 2-6Z"></path><path d="M10.5 19a2 2 0 0 0 3 0"></path></svg>
+        <span style="position:absolute;top:8px;right:9px;width:8px;height:8px;border-radius:50%;background:#e8493f;border:2px solid {{ t.side }}"></span>
+      </button>
+    </div>
+
+    <!-- scroll body -->
+    <div ref="{{ scrollRef }}" style="flex:1;overflow-y:auto;padding:24px 26px 40px">
+
+      <!-- ===== OVERVIEW ===== -->
+      <sc-if value="{{ isOverview }}" hint-placeholder-val="{{ true }}">
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:18px">
+          <sc-for list="{{ kpis }}" as="k" hint-placeholder-count="4">
+            <div style="{{ cardStyle }}animation:floatIn .4s ease both" style-hover="transform:translateY(-3px)">
+              <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:14px">
+                <div style="width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:19px;background:{{ k.iconBg }}">{{ k.icon }}</div>
+                <span style="{{ k.trendStyle }}">{{ k.trend }}</span>
+              </div>
+              <div style="font:800 27px 'Plus Jakarta Sans';color:{{ t.text }};letter-spacing:-.5px;animation:countUp .5s ease both">{{ k.value }}</div>
+              <div style="font:600 12.5px 'Plus Jakarta Sans';color:{{ t.muted }};margin-top:2px">{{ k.label }}</div>
+              <svg viewBox="0 0 120 34" width="100%" height="34" preserveAspectRatio="none" style="margin-top:12px;display:block">
+                <path d="{{ k.areaPath }}" fill="{{ k.spark }}" opacity="0.13"></path>
+                <path d="{{ k.linePath }}" fill="none" stroke="{{ k.spark }}" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </div>
+          </sc-for>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1.62fr 1fr;gap:16px;margin-bottom:18px">
+          <!-- main trend chart -->
+          <div style="{{ cardStyle }}">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;flex-wrap:wrap;gap:10px">
+              <div>
+                <div style="font:800 16px 'Plus Jakarta Sans';color:{{ t.text }}">Growth &amp; activity</div>
+                <div style="font:600 12.5px 'Plus Jakarta Sans';color:{{ t.muted }}">Last 14 days · {{ metricLabel }}</div>
+              </div>
+              <div style="display:flex;gap:3px;background:{{ t.input }};border:1px solid {{ t.inputBorder }};border-radius:11px;padding:3px">
+                <sc-for list="{{ metricBtns }}" as="m" hint-placeholder-count="3">
+                  <button onclick="{{ m.onClick }}" style="{{ m.style }}">{{ m.label }}</button>
+                </sc-for>
+              </div>
+            </div>
+            <div style="position:relative;margin-top:10px">
+              <svg viewBox="0 0 {{ chart.w }} {{ chart.h }}" width="100%" height="240" preserveAspectRatio="none" style="display:block;overflow:visible">
+                <sc-for list="{{ chart.grid }}" as="g" hint-placeholder-count="4">
+                  <line x1="0" y1="{{ g.y }}" x2="{{ chart.w }}" y2="{{ g.y }}" stroke="{{ t.divider }}" stroke-width="1"></line>
+                </sc-for>
+                <path d="{{ chart.area }}" fill="{{ t.accent }}" opacity="0.12"></path>
+                <path d="{{ chart.line }}" fill="none" stroke="{{ t.accent }}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                <sc-if value="{{ chart.hover }}" hint-placeholder-val="{{ false }}">
+                  <line x1="{{ chart.hx }}" y1="0" x2="{{ chart.hx }}" y2="{{ chart.h }}" stroke="{{ t.accent }}" stroke-width="1.4" stroke-dasharray="4 4" opacity=".55"></line>
+                  <circle cx="{{ chart.hx }}" cy="{{ chart.hy }}" r="6" fill="{{ t.accent }}" stroke="{{ t.side }}" stroke-width="3"></circle>
+                </sc-if>
+              </svg>
+              <sc-if value="{{ chart.hover }}" hint-placeholder-val="{{ false }}">
+                <div style="position:absolute;top:-6px;pointer-events:none;transform:translateX(-50%);left:{{ chart.tipLeft }};background:{{ t.panel }};border:1px solid {{ t.divider }};border-radius:11px;padding:7px 11px;box-shadow:{{ t.cardShadow }};white-space:nowrap;z-index:5">
+                  <div style="font:800 14px 'Plus Jakarta Sans';color:{{ t.text }}">{{ chart.tipVal }}</div>
+                  <div style="font:600 11px 'Plus Jakarta Sans';color:{{ t.muted }}">{{ chart.tipDay }}</div>
+                </div>
+              </sc-if>
+              <div style="position:absolute;inset:0;display:flex">
+                <sc-for list="{{ chart.cols }}" as="c" hint-placeholder-count="14">
+                  <div onmouseenter="{{ c.onEnter }}" onmouseleave="{{ onChartLeave }}" style="flex:1;cursor:pointer"></div>
+                </sc-for>
+              </div>
+            </div>
+            <div style="display:flex;justify-content:space-between;margin-top:8px">
+              <sc-for list="{{ chart.xlabels }}" as="x" hint-placeholder-count="5">
+                <span style="font:600 11px 'Plus Jakarta Sans';color:{{ t.faint }}">{{ x.label }}</span>
+              </sc-for>
+            </div>
+          </div>
+
+          <!-- channel donut -->
+          <div style="{{ cardStyle }}">
+            <div style="font:800 16px 'Plus Jakarta Sans';color:{{ t.text }}">Messages by channel</div>
+            <div style="font:600 12.5px 'Plus Jakarta Sans';color:{{ t.muted }};margin-bottom:8px">Share of total volume</div>
+            <div style="display:flex;align-items:center;gap:18px;margin-top:10px">
+              <div style="position:relative;width:148px;height:148px;flex:none">
+                <svg viewBox="0 0 120 120" width="148" height="148" style="transform:rotate(-90deg)">
+                  <circle cx="60" cy="60" r="48" fill="none" stroke="{{ t.input }}" stroke-width="16"></circle>
+                  <sc-for list="{{ donut.segs }}" as="d" hint-placeholder-count="5">
+                    <circle cx="60" cy="60" r="48" fill="none" stroke="{{ d.color }}" stroke-width="16" stroke-linecap="round" stroke-dasharray="{{ d.dash }}" stroke-dashoffset="{{ d.offset }}"></circle>
+                  </sc-for>
+                </svg>
+                <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center">
+                  <div style="font:800 22px 'Plus Jakarta Sans';color:{{ t.text }}">{{ donut.total }}</div>
+                  <div style="font:600 10.5px 'Plus Jakarta Sans';color:{{ t.muted }}">total msgs</div>
+                </div>
+              </div>
+              <div style="flex:1;display:flex;flex-direction:column;gap:9px">
+                <sc-for list="{{ donut.legend }}" as="l" hint-placeholder-count="5">
+                  <div style="display:flex;align-items:center;gap:9px">
+                    <span style="width:10px;height:10px;border-radius:4px;flex:none;background:{{ l.color }}"></span>
+                    <span style="flex:1;font:700 13px 'Plus Jakarta Sans';color:{{ t.text }}">{{ l.name }}</span>
+                    <span style="font:700 13px 'Plus Jakarta Sans';color:{{ t.muted }}">{{ l.pct }}</span>
+                  </div>
+                </sc-for>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+          <!-- messages bar -->
+          <div style="{{ cardStyle }}">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
+              <div>
+                <div style="font:800 16px 'Plus Jakarta Sans';color:{{ t.text }}">Messages sent</div>
+                <div style="font:600 12.5px 'Plus Jakarta Sans';color:{{ t.muted }}">Per day · this week</div>
+              </div>
+              <span style="font:800 13px 'Plus Jakarta Sans';color:#21c197;background:color-mix(in srgb,#21c197 15%,transparent);padding:4px 10px;border-radius:9px">▲ 12.6%</span>
+            </div>
+            <div style="display:flex;align-items:flex-end;gap:10px;height:150px">
+              <sc-for list="{{ bars }}" as="b" hint-placeholder-count="7">
+                <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:7px;height:100%;justify-content:flex-end;cursor:pointer" onmouseenter="{{ b.onEnter }}" onmouseleave="{{ onBarLeave }}">
+                  <sc-if value="{{ b.hovered }}" hint-placeholder-val="{{ false }}">
+                    <span style="font:800 11.5px 'Plus Jakarta Sans';color:{{ t.text }};margin-bottom:-2px">{{ b.val }}</span>
+                  </sc-if>
+                  <div style="width:70%;border-radius:8px 8px 4px 4px;height:{{ b.h }};background:{{ b.fill }};transform-origin:bottom;animation:growBar .5s ease both;transition:filter .15s" style-hover="filter:brightness(1.12)"></div>
+                  <span style="font:600 11px 'Plus Jakarta Sans';color:{{ t.faint }}">{{ b.label }}</span>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+
+          <!-- top channels -->
+          <div style="{{ cardStyle }}">
+            <div style="font:800 16px 'Plus Jakarta Sans';color:{{ t.text }};margin-bottom:14px">Top channels</div>
+            <div style="display:flex;flex-direction:column;gap:13px">
+              <sc-for list="{{ topChannels }}" as="c" hint-placeholder-count="5">
+                <div style="display:flex;align-items:center;gap:12px">
+                  <div style="width:38px;height:38px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:18px;background:{{ t.input }};flex:none">{{ c.icon }}</div>
+                  <div style="flex:1;min-width:0">
+                    <div style="display:flex;justify-content:space-between;margin-bottom:5px">
+                      <span style="font:700 13.5px 'Plus Jakarta Sans';color:{{ t.text }}">#{{ c.name }}</span>
+                      <span style="font:700 12.5px 'Plus Jakarta Sans';color:{{ t.muted }}">{{ c.count }}</span>
+                    </div>
+                    <div style="height:7px;border-radius:6px;background:{{ t.input }};overflow:hidden">
+                      <div style="height:100%;border-radius:6px;width:{{ c.pct }};background:{{ t.accentGrad }};transition:width .6s ease"></div>
+                    </div>
+                  </div>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+      </sc-if>
+
+      <!-- ===== USERS ===== -->
+      <sc-if value="{{ isUsers }}" hint-placeholder-val="{{ false }}">
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:18px">
+          <sc-for list="{{ userKpis }}" as="k" hint-placeholder-count="4">
+            <div style="{{ cardStyle }}">
+              <div style="font:600 12.5px 'Plus Jakarta Sans';color:{{ t.muted }};margin-bottom:6px">{{ k.label }}</div>
+              <div style="font:800 25px 'Plus Jakarta Sans';color:{{ t.text }};letter-spacing:-.5px">{{ k.value }}</div>
+            </div>
+          </sc-for>
+        </div>
+        <div style="{{ cardStyle }}padding:0;overflow:hidden">
+          <div style="display:flex;align-items:center;gap:12px;padding:16px 18px;border-bottom:1px solid {{ t.divider }}">
+            <div style="font:800 16px 'Plus Jakarta Sans';color:{{ t.text }}">All members</div>
+            <span style="font:700 12px 'Plus Jakarta Sans';color:{{ t.accent }};background:{{ t.active }};padding:3px 9px;border-radius:20px">{{ userRows.length }} total</span>
+            <span style="flex:1"></span>
+            <div style="display:flex;align-items:center;gap:7px;background:{{ t.input }};border:1px solid {{ t.inputBorder }};border-radius:10px;padding:8px 12px;width:200px">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" style="color:{{ t.faint }}"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3-3"></path></svg>
+              <input value="{{ userQuery }}" oninput="{{ onUserQuery }}" placeholder="Filter members…" style="border:none;background:transparent;outline:none;flex:1;font:600 13px 'Plus Jakarta Sans';color:{{ t.text }}">
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr 0.6fr;padding:11px 18px;border-bottom:1px solid {{ t.divider }};font:800 11px 'Plus Jakarta Sans';letter-spacing:.5px;color:{{ t.faint }}">
+            <span>MEMBER</span><span>ROLE</span><span>MESSAGES</span><span>JOINED</span><span style="text-align:right">STATUS</span>
+          </div>
+          <sc-for list="{{ userRows }}" as="u" hint-placeholder-count="6">
+            <div style="display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr 0.6fr;align-items:center;padding:12px 18px;border-bottom:1px solid {{ t.divider }};transition:background .14s" style-hover="background:{{ t.hover }}">
+              <div style="display:flex;align-items:center;gap:11px;min-width:0">
+                <div style="{{ u.avatarStyle }}">{{ u.initial }}</div>
+                <div style="min-width:0">
+                  <div style="font:700 13.5px 'Plus Jakarta Sans';color:{{ t.text }};white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ u.name }}</div>
+                  <div style="font:600 11.5px 'Plus Jakarta Sans';color:{{ t.muted }}">{{ u.handle }}</div>
+                </div>
+              </div>
+              <span style="font:600 13px 'Plus Jakarta Sans';color:{{ t.muted }}">{{ u.role }}</span>
+              <span style="font:700 13px 'Plus Jakarta Sans';color:{{ t.text }}">{{ u.messages }}</span>
+              <span style="font:600 13px 'Plus Jakarta Sans';color:{{ t.muted }}">{{ u.joined }}</span>
+              <span style="justify-self:end"><span style="{{ u.statusStyle }}">{{ u.status }}</span></span>
+            </div>
+          </sc-for>
+        </div>
+      </sc-if>
+
+      <!-- ===== REPORTS ===== -->
+      <sc-if value="{{ isReports }}" hint-placeholder-val="{{ false }}">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+          <div style="{{ cardStyle }}">
+            <div style="font:800 16px 'Plus Jakarta Sans';color:{{ t.text }};margin-bottom:2px">New registrations</div>
+            <div style="font:600 12.5px 'Plus Jakarta Sans';color:{{ t.muted }};margin-bottom:14px">Daily signups · 14 days</div>
+            <svg viewBox="0 0 {{ rep.signup.w }} {{ rep.signup.h }}" width="100%" height="200" preserveAspectRatio="none" style="display:block">
+              <path d="{{ rep.signup.area }}" fill="#7C5CFF" opacity="0.13"></path>
+              <path d="{{ rep.signup.line }}" fill="none" stroke="#7C5CFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </div>
+          <div style="{{ cardStyle }}">
+            <div style="font:800 16px 'Plus Jakarta Sans';color:{{ t.text }};margin-bottom:2px">Avg. session time</div>
+            <div style="font:600 12.5px 'Plus Jakarta Sans';color:{{ t.muted }};margin-bottom:14px">Minutes per active user · 14 days</div>
+            <svg viewBox="0 0 {{ rep.session.w }} {{ rep.session.h }}" width="100%" height="200" preserveAspectRatio="none" style="display:block">
+              <path d="{{ rep.session.area }}" fill="#21c197" opacity="0.13"></path>
+              <path d="{{ rep.session.line }}" fill="none" stroke="#21c197" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </div>
+          <div style="{{ cardStyle }}">
+            <div style="font:800 16px 'Plus Jakarta Sans';color:{{ t.text }};margin-bottom:2px">Active users</div>
+            <div style="font:600 12.5px 'Plus Jakarta Sans';color:{{ t.muted }};margin-bottom:14px">Daily active · 14 days</div>
+            <div style="display:flex;align-items:flex-end;gap:6px;height:170px">
+              <sc-for list="{{ rep.activeBars }}" as="b" hint-placeholder-count="14">
+                <div style="flex:1;border-radius:6px 6px 3px 3px;height:{{ b.h }};background:{{ t.accentGrad }};transform-origin:bottom;animation:growBar .5s ease both" style-hover="filter:brightness(1.12)"></div>
+              </sc-for>
+            </div>
+          </div>
+          <div style="{{ cardStyle }}">
+            <div style="font:800 16px 'Plus Jakarta Sans';color:{{ t.text }};margin-bottom:14px">Key metrics</div>
+            <div style="display:flex;flex-direction:column;gap:11px">
+              <sc-for list="{{ rep.metricRows }}" as="m" hint-placeholder-count="5">
+                <div style="display:flex;align-items:center;gap:12px;padding:11px 13px;border-radius:13px;background:{{ t.input }}">
+                  <span style="font-size:18px">{{ m.icon }}</span>
+                  <span style="flex:1;font:700 13.5px 'Plus Jakarta Sans';color:{{ t.text }}">{{ m.label }}</span>
+                  <span style="font:800 15px 'Plus Jakarta Sans';color:{{ t.text }}">{{ m.value }}</span>
+                  <span style="{{ m.trendStyle }}">{{ m.trend }}</span>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+      </sc-if>
+
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script="" data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;height&quot;:&quot;100%&quot;},&quot;defaultTheme&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;midnight&quot;,&quot;daylight&quot;,&quot;candy&quot;],&quot;default&quot;:&quot;midnight&quot;,&quot;tsType&quot;:&quot;'midnight'|'daylight'|'candy'&quot;},&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#FF6A3D&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.scrollEl = null;
+    this.THEMES = {
+      midnight: {
+        name:'Midnight', icon:'🌙',
+        appBg:'radial-gradient(1100px 560px at 78% -12%, #28304a 0%, #0e1015 58%)',
+        side:'#171a23', header:'rgba(23,26,35,.72)', panel:'#1b1f2b', card:'#1b1f2b',
+        text:'#edeff5', muted:'#8b92a6', faint:'#5b6175',
+        divider:'rgba(255,255,255,.08)', input:'#212533', inputBorder:'rgba(255,255,255,.07)',
+        hover:'rgba(255,255,255,.06)', cardShadow:'0 3px 16px rgba(0,0,0,.32)', cardBorder:'rgba(255,255,255,.07)',
+      },
+      daylight: {
+        name:'Daylight', icon:'☀️',
+        appBg:'#e9ecf4',
+        side:'#ffffff', header:'rgba(255,255,255,.82)', panel:'#ffffff', card:'#ffffff',
+        text:'#1a1d27', muted:'#6b7180', faint:'#a5abba',
+        divider:'rgba(20,24,40,.08)', input:'#f1f3f9', inputBorder:'rgba(20,24,40,.1)',
+        hover:'rgba(20,24,40,.045)', cardShadow:'0 4px 18px rgba(30,40,80,.07)', cardBorder:'rgba(20,24,40,.07)',
+      },
+      candy: {
+        name:'Bubble', icon:'🫧',
+        appBg:'linear-gradient(155deg,#fff0f6 0%,#eef1ff 52%,#f1fbff 100%)',
+        side:'rgba(255,255,255,.78)', header:'rgba(255,255,255,.62)', panel:'rgba(255,255,255,.94)', card:'rgba(255,255,255,.82)',
+        text:'#332c4a', muted:'#897fa8', faint:'#b6aecf',
+        divider:'rgba(130,100,170,.14)', input:'rgba(255,255,255,.85)', inputBorder:'rgba(150,120,190,.22)',
+        hover:'rgba(150,120,190,.1)', cardShadow:'0 6px 22px rgba(150,120,190,.18)', cardBorder:'rgba(150,120,190,.16)',
+      },
+    };
+    this.DATA = {
+      signups:[12,18,15,22,19,28,32,30,38,42,39,48,52,61],
+      active:[120,135,128,150,142,168,180,175,195,210,205,230,248,265],
+      messages:[820,940,880,1100,1020,1280,1450,1390,1600,1720,1680,1900,2050,2240],
+      session:[8.2,8.5,8.1,9.0,8.7,9.4,9.8,9.6,10.2,10.5,10.3,11.0,11.2,11.6],
+    };
+    this.WEEK=['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+    this.CHANNELS=[
+      {name:'general',icon:'💬',count:'418k',color:'#FF6A3D',raw:38},
+      {name:'gaming',icon:'🎮',count:'264k',color:'#7C5CFF',raw:24},
+      {name:'design',icon:'🎨',count:'176k',color:'#21c197',raw:16},
+      {name:'music',icon:'🎵',count:'132k',color:'#3D9DF6',raw:12},
+      {name:'random',icon:'🎲',count:'110k',color:'#FFB13D',raw:10},
+    ];
+    this.USERS=[
+      {name:'Aiko Tanaka',handle:'@aiko',role:'Member',messages:'4,182',joined:'Jan 4, 2026',status:'Active',color:'#FF6A88'},
+      {name:'Ren Watanabe',handle:'@ren',role:'Moderator',messages:'3,920',joined:'Dec 19, 2025',status:'Active',color:'#7C5CFF'},
+      {name:'Mika Sato',handle:'@mika',role:'Member',messages:'2,604',joined:'Feb 11, 2026',status:'Active',color:'#00C2A8'},
+      {name:'Sora Kim',handle:'@sora',role:'Member',messages:'1,870',joined:'Mar 2, 2026',status:'Idle',color:'#3D9DF6'},
+      {name:'Kai Nakamura',handle:'@kai',role:'Member',messages:'1,540',joined:'Mar 18, 2026',status:'Offline',color:'#FFB13D'},
+      {name:'Yuki Mori',handle:'@yuki',role:'Admin',messages:'6,210',joined:'Nov 8, 2025',status:'Active',color:'#FF6A3D'},
+      {name:'Hana Suzuki',handle:'@hana',role:'Member',messages:'940',joined:'Apr 1, 2026',status:'Offline',color:'#9b6cff'},
+      {name:'Leo Yamada',handle:'@leo',role:'Member',messages:'2,118',joined:'Feb 24, 2026',status:'Idle',color:'#e85a92'},
+    ];
+    this.state = {
+      theme: this.THEMES[props.defaultTheme] ? props.defaultTheme : 'midnight',
+      view: 'overview',
+      range: '14d',
+      metric: 'active',
+      chartHover: null,
+      barHover: null,
+      userQuery: '',
+    };
+  }
+
+  av(color,size){return `width:${size}px;height:${size}px;border-radius:11px;flex:none;display:flex;align-items:center;justify-content:center;font:800 ${Math.round(size*0.38)}px 'Plus Jakarta Sans';color:#fff;background:linear-gradient(135deg, color-mix(in srgb, ${color} 78%, #fff), ${color})`;}
+
+  // build smooth-ish polyline path + area
+  pathFor(vals,w,h,padT,padB){
+    const min=Math.min(...vals), max=Math.max(...vals), span=(max-min)||1;
+    const n=vals.length;
+    const X=i=>n===1?w/2:i/(n-1)*w;
+    const Y=v=>h-padB-((v-min)/span)*(h-padT-padB);
+    const pts=vals.map((v,i)=>[X(i),Y(v)]);
+    const line='M'+pts.map(p=>p[0].toFixed(1)+' '+p[1].toFixed(1)).join(' L');
+    const area=line+` L${w} ${h} L0 ${h} Z`;
+    return {line,area,pts,X,Y};
+  }
+
+  setView=(v)=>this.setState({view:v});
+
+  renderVals(){
+    const s=this.state;
+    const base=this.THEMES[s.theme];
+    const accent=this.props.accent||'#FF6A3D';
+    const t={...base,accent,
+      accentGrad:`linear-gradient(135deg, color-mix(in srgb, ${accent} 70%, #fff), ${accent})`,
+      active:`color-mix(in srgb, ${accent} 15%, transparent)`,
+      glow:`0 6px 22px color-mix(in srgb, ${accent} 40%, transparent)`,
+    };
+    const cardStyle=`background:${t.card};border:1px solid ${t.cardBorder};border-radius:18px;padding:18px;box-shadow:${t.cardShadow};transition:transform .18s,background .45s ease`;
+
+    const icon=(p)=>`<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${p}</svg>`;
+    const NAV=[
+      {id:'overview',label:'Dashboard',icon:icon('<rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/>')},
+      {id:'users',label:'Members',icon:icon('<circle cx="9" cy="8" r="3.2"/><path d="M3.5 19a5.5 5.5 0 0 1 11 0"/><path d="M16 5.5a3 3 0 0 1 0 5.8"/><path d="M16.5 19a5 5 0 0 1 4-5"/>'),badge:'12'},
+      {id:'reports',label:'Reports',icon:icon('<path d="M3 3v18h18"/><path d="m7 14 3-4 3 3 4-6"/>')},
+    ];
+    const GEN=[
+      {id:'channels',label:'Channels',icon:icon('<path d="M9 4 7 20"/><path d="M17 4l-2 16"/><path d="M4 9h16"/><path d="M3 15h16"/>')},
+      {id:'settings',label:'Settings',icon:icon('<circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.6 1.6 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.6 1.6 0 0 0-2.7 1.1V21a2 2 0 0 1-4 0v-.1A1.6 1.6 0 0 0 7 19.4l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1A1.6 1.6 0 0 0 5 12.6H4.9a2 2 0 0 1 0-4H5a1.6 1.6 0 0 0 1.1-2.7L6 5.7a2 2 0 1 1 2.8-2.8l.1.1A1.6 1.6 0 0 0 12 3.6V3a2 2 0 0 1 4 0v.1a1.6 1.6 0 0 0 2.7 1.1l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1A1.6 1.6 0 0 0 21 12.6"/>')},
+    ];
+    const navStyle=(id)=>`display:flex;align-items:center;gap:11px;width:100%;border:none;cursor:pointer;padding:10px 12px;border-radius:12px;font:700 13.5px 'Plus Jakarta Sans';transition:background .15s,color .15s;background:${s.view===id?t.active:'transparent'};color:${s.view===id?t.accent:t.muted}`;
+    const navItems=NAV.map(n=>({...n,style:navStyle(n.id),onClick:()=>this.setView(n.id)}));
+    const navGeneral=GEN.map(n=>({...n,style:navStyle(n.id),onClick:()=>this.setView(n.id)}));
+
+    // KPIs with sparklines
+    const trendUp=`font:800 12px 'Plus Jakarta Sans';color:#21c197;background:color-mix(in srgb,#21c197 14%,transparent);padding:3px 8px;border-radius:8px`;
+    const spark=(vals,color)=>{const p=this.pathFor(vals,120,34,4,4);return{linePath:p.line,areaPath:p.area,spark:color};};
+    const kpiDefs=[
+      {icon:'👥',iconBg:'color-mix(in srgb,#7C5CFF 16%,transparent)',value:'12,480',label:'Total registered',trend:'▲ 8.2%',data:this.DATA.signups,color:'#7C5CFF'},
+      {icon:'🟢',iconBg:'color-mix(in srgb,#21c197 16%,transparent)',value:'2,317',label:'Active today',trend:'▲ 4.1%',data:this.DATA.active,color:'#21c197'},
+      {icon:'💬',iconBg:t.active,value:'1.24M',label:'Total messages',trend:'▲ 12.6%',data:this.DATA.messages,color:accent},
+      {icon:'⏱️',iconBg:'color-mix(in srgb,#3D9DF6 16%,transparent)',value:'11m 36s',label:'Avg. session',trend:'▲ 5.3%',data:this.DATA.session,color:'#3D9DF6'},
+    ];
+    const kpis=kpiDefs.map(k=>{const sp=spark(k.data,k.color);return{...k,...sp,trendStyle:trendUp};});
+
+    // main chart
+    const metricMap={active:{label:'Active users',data:this.DATA.active,fmt:v=>v.toLocaleString()},signups:{label:'New signups',data:this.DATA.signups,fmt:v=>v.toLocaleString()},messages:{label:'Messages',data:this.DATA.messages,fmt:v=>v.toLocaleString()}};
+    const cur=metricMap[s.metric];
+    const CW=720,CH=240;
+    const cp=this.pathFor(cur.data,CW,CH,24,28);
+    const gridLines=[0,1,2,3].map(i=>({y:(24+(i/3)*(CH-24-28)).toFixed(1)}));
+    const n=cur.data.length;
+    const dayLabel=(i)=>{const d=new Date();d.setDate(d.getDate()-(n-1-i));return (d.getMonth()+1)+'/'+d.getDate();};
+    const cols=cur.data.map((v,i)=>({onEnter:()=>this.setState({chartHover:i})}));
+    const hov=s.chartHover;
+    const hasHov=hov!=null;
+    const xlabels=[0,Math.floor(n/4),Math.floor(n/2),Math.floor(3*n/4),n-1].map(i=>({label:dayLabel(i)}));
+    const metricBtns=Object.keys(metricMap).map(k=>({label:metricMap[k].label.split(' ')[k==='signups'?1:0],onClick:()=>this.setState({metric:k}),style:`border:none;cursor:pointer;padding:6px 11px;border-radius:9px;font:700 12px 'Plus Jakarta Sans';transition:all .15s;background:${s.metric===k?t.accentGrad:'transparent'};color:${s.metric===k?'#fff':t.muted}`}));
+
+    // donut
+    const C=2*Math.PI*48;
+    let acc=0;
+    const donutSegs=this.CHANNELS.map(c=>{const len=C*c.raw/100;const seg={color:c.color,dash:`${len.toFixed(1)} ${(C-len).toFixed(1)}`,offset:(-acc).toFixed(1)};acc+=len;return seg;});
+    const donut={segs:donutSegs,total:'1.24M',legend:this.CHANNELS.map(c=>({name:'#'+c.name,color:c.color,pct:c.raw+'%'}))};
+
+    // messages bar (week)
+    const wk=this.DATA.messages.slice(-7);
+    const wkMax=Math.max(...wk);
+    const bars=wk.map((v,i)=>({val:v.toLocaleString(),label:this.WEEK[i],h:(18+(v/wkMax)*82).toFixed(0)+'%',fill:i===wk.length-1?t.accentGrad:`color-mix(in srgb, ${accent} 38%, transparent)`,hovered:s.barHover===i,onEnter:()=>this.setState({barHover:i})}));
+
+    // top channels
+    const maxC=Math.max(...this.CHANNELS.map(c=>c.raw));
+    const topChannels=this.CHANNELS.map(c=>({...c,pct:(c.raw/maxC*100).toFixed(0)+'%'}));
+
+    // users
+    const q=s.userQuery.trim().toLowerCase();
+    const stStyle=(st)=>{const m={Active:'#21c197',Idle:'#FFB13D',Offline:'#8890a0'}[st];return `font:700 11.5px 'Plus Jakarta Sans';color:${m};background:color-mix(in srgb,${m} 15%,transparent);padding:4px 11px;border-radius:20px;white-space:nowrap`;};
+    const userRows=this.USERS.filter(u=>!q||u.name.toLowerCase().includes(q)||u.handle.toLowerCase().includes(q)).map(u=>({...u,initial:u.name[0],avatarStyle:this.av(u.color,38),statusStyle:stStyle(u.status)}));
+    const userKpis=[
+      {label:'Total members',value:'12,480'},
+      {label:'New this week',value:'+312'},
+      {label:'Active now',value:'2,317'},
+      {label:'Moderators',value:'18'},
+    ];
+
+    // reports
+    const rep={
+      signup:{w:CW,h:200,...this.pathFor(this.DATA.signups,CW,200,18,22)},
+      session:{w:CW,h:200,...this.pathFor(this.DATA.session,CW,200,18,22)},
+      activeBars:(()=>{const mx=Math.max(...this.DATA.active);return this.DATA.active.map(v=>({h:(14+(v/mx)*84).toFixed(0)+'%'}));})(),
+      metricRows:[
+        {icon:'📈',label:'Retention (30d)',value:'68.4%',trend:'▲ 2.1%'},
+        {icon:'🔁',label:'Messages / user',value:'99.3',trend:'▲ 6.0%'},
+        {icon:'🕒',label:'Peak hour',value:'9–10pm',trend:'JST'},
+        {icon:'🌍',label:'Countries',value:'42',trend:'▲ 3'},
+        {icon:'⚡',label:'Avg. response',value:'1m 12s',trend:'▼ 8s'},
+      ].map(m=>({...m,trendStyle:`font:700 12px 'Plus Jakarta Sans';color:${t.muted};white-space:nowrap`})),
+    };
+
+    const rangeBtns=['7d','14d','30d'].map(r=>({label:r,onClick:()=>this.setState({range:r}),style:`border:none;cursor:pointer;padding:6px 12px;border-radius:9px;font:700 12px 'Plus Jakarta Sans';transition:all .15s;background:${s.range===r?t.accentGrad:'transparent'};color:${s.range===r?'#fff':t.muted}`}));
+    const themeBtns=Object.keys(this.THEMES).map(k=>({key:k,icon:this.THEMES[k].icon,label:this.THEMES[k].name,onClick:()=>this.setState({theme:k}),style:`border:none;cursor:pointer;width:34px;height:30px;border-radius:9px;font-size:14px;display:flex;align-items:center;justify-content:center;transition:all .18s;background:${s.theme===k?t.accentGrad:'transparent'};box-shadow:${s.theme===k?t.glow:'none'};filter:${s.theme===k?'none':'grayscale(.4) opacity(.65)'}`}));
+
+    const titles={overview:['Dashboard','Realtime overview of your community'],users:['Members','Manage everyone in Chatrix'],reports:['Reports','Deep-dive analytics & trends'],channels:['Channels','Organize text & voice spaces'],settings:['Settings','Workspace configuration']};
+    const vt=titles[s.view]||titles.overview;
+
+    return {
+      t,cardStyle,
+      navItems,navGeneral,
+      rangeBtns,themeBtns,
+      viewTitle:vt[0],viewSub:vt[1],
+      isOverview:s.view==='overview',
+      isUsers:s.view==='users',
+      isReports:s.view==='reports'||s.view==='channels'||s.view==='settings',
+      kpis,
+      metricLabel:cur.label,metricBtns,
+      chart:{
+        w:CW,h:CH,grid:gridLines,line:cp.line,area:cp.area,cols,
+        hover:hasHov,
+        hx:hasHov?cp.pts[hov][0].toFixed(1):0,
+        hy:hasHov?cp.pts[hov][1].toFixed(1):0,
+        tipLeft:hasHov?(cp.pts[hov][0]/CW*100).toFixed(2)+'%':'0',
+        tipVal:hasHov?cur.fmt(cur.data[hov]):'',
+        tipDay:hasHov?dayLabel(hov):'',
+        xlabels,
+      },
+      onChartLeave:()=>this.setState({chartHover:null}),
+      donut,
+      bars,onBarLeave:()=>this.setState({barHover:null}),
+      topChannels,
+      userKpis,userRows,userQuery:s.userQuery,onUserQuery:(e)=>this.setState({userQuery:e.target.value}),
+      rep,
+      scrollRef:(el)=>{this.scrollEl=el;},
+    };
+  }
+}
+</script>
+
+
+</body></html>

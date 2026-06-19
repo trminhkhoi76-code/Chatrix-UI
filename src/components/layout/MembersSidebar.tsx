@@ -20,11 +20,15 @@ export function MembersSidebar() {
 
   return (
     <aside
-      className="w-56 border-l border-[#1e2333]/60 flex-shrink-0 overflow-y-auto py-4 hidden xl:block animate-slide-right"
-      style={{ background: 'rgba(24, 29, 42, var(--panel-opacity, 0.97))' }}
+      className="w-56 flex-shrink-0 overflow-y-auto py-4 hidden xl:block animate-slide-right"
+      style={{
+        background: 'var(--side-bg)',
+        borderLeft: '1px solid var(--divider)',
+        transition: 'background .45s ease',
+      }}
     >
       <div className="px-3 mb-3">
-        <span className="text-[11px] font-semibold text-[#5a6480] uppercase tracking-widest">
+        <span className="text-[11px] font-semibold uppercase tracking-widest" style={{ color: 'var(--faint)' }}>
           Online — {onlineMembers.length}
         </span>
       </div>
@@ -33,7 +37,7 @@ export function MembersSidebar() {
       ))}
 
       <div className="px-3 mt-5 mb-3">
-        <span className="text-[11px] font-semibold text-[#5a6480] uppercase tracking-widest">
+        <span className="text-[11px] font-semibold uppercase tracking-widest" style={{ color: 'var(--faint)' }}>
           Offline — {offlineMembers.length}
         </span>
       </div>
@@ -59,16 +63,17 @@ function MemberRow({
   return (
     <div
       className={cn(
-        'flex items-center gap-3 px-3 py-2 mx-2 rounded-xl cursor-pointer transition-all duration-150',
-        'hover:bg-[#1e2333]/80 group',
+        'flex items-center gap-3 px-3 py-2 mx-2 rounded-xl cursor-pointer transition-all duration-150 group',
         !online && 'opacity-50'
       )}
       style={{ animationDelay: `${animDelay ?? 0}ms` }}
+      onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = 'var(--hover-bg)'; }}
+      onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = 'transparent'; }}
     >
       <Avatar name={name} size="sm" online={online} />
       <div className="min-w-0">
-        <p className="text-sm font-semibold text-[#eef0f5] truncate leading-tight group-hover:text-white transition-colors">{name}</p>
-        <p className="text-xs text-[#5a6480] truncate">{activity}</p>
+        <p className="text-sm font-semibold truncate leading-tight" style={{ color: 'var(--text)' }}>{name}</p>
+        <p className="text-xs truncate" style={{ color: 'var(--muted)' }}>{activity}</p>
       </div>
     </div>
   );

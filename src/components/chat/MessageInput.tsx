@@ -82,14 +82,20 @@ export function MessageInput() {
     <div className="px-4 pb-5 pt-2 flex-shrink-0">
       <form
         onSubmit={handleSubmit}
-        className="flex items-end gap-2 bg-[#1e2333] rounded-2xl border border-[#252b3a] px-4 py-3 shadow-lg shadow-black/20 focus-within:border-[#ff6b35]/30 transition-colors duration-200"
+        className="flex items-end gap-2 rounded-2xl px-4 py-3 shadow-lg shadow-black/20 transition-colors duration-200"
+        style={{
+          background: 'var(--input-bg)',
+          border: '1px solid var(--input-border)',
+          transition: 'background .45s ease, border-color .3s ease',
+        }}
       >
         {/* File attach */}
         <button
           type="button"
           onClick={() => fileRef.current?.click()}
           disabled={uploading}
-          className="p-1.5 text-[#636b82] hover:text-[#ff8c5a] transition-colors flex-shrink-0"
+          className="p-1.5 hover:text-[#ff8c5a] transition-colors flex-shrink-0"
+          style={{ color: 'var(--muted)' }}
         >
           <Paperclip size={18} className={uploading ? 'animate-pulse' : ''} />
         </button>
@@ -110,10 +116,10 @@ export function MessageInput() {
           disabled={false}
           rows={1}
           className={cn(
-            'flex-1 bg-transparent text-[#eef0f5] placeholder-[#636b82] text-sm resize-none',
+            'flex-1 bg-transparent text-sm resize-none',
             'focus:outline-none max-h-32 leading-relaxed'
           )}
-          style={{ height: 'auto' }}
+          style={{ height: 'auto', color: 'var(--text)' }}
           onInput={(e) => {
             const t = e.currentTarget;
             t.style.height = 'auto';
@@ -121,10 +127,11 @@ export function MessageInput() {
           }}
         />
 
-        {/* Emoji */}
+        {/* Emoji – inserts 😊 into the draft, matching reference behaviour */}
         <button
           type="button"
-          className="p-1.5 text-[#636b82] hover:text-yellow-400 transition-colors flex-shrink-0 text-lg leading-none"
+          onClick={() => setContent((c) => c + '😊')}
+          className="p-1.5 hover:scale-125 active:scale-110 transition-transform flex-shrink-0 text-xl leading-none"
           title="Emoji"
         >
           😊

@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="6005f8c5-7474-4b96-be21-cc6da4794ca7"></script>
+
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<style>/* cyrillic-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("e5828ca8-7f35-4ea1-80f9-6e0bfc0736fb") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("9607f741-c90c-41f4-be1e-e24346153937") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("ad10aa90-58ff-4694-b9fd-a6333e3af5f2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("5ab5cb8b-74d5-43d2-a65c-773c21778f81") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("e5828ca8-7f35-4ea1-80f9-6e0bfc0736fb") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("9607f741-c90c-41f4-be1e-e24346153937") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("ad10aa90-58ff-4694-b9fd-a6333e3af5f2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("5ab5cb8b-74d5-43d2-a65c-773c21778f81") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("e5828ca8-7f35-4ea1-80f9-6e0bfc0736fb") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("9607f741-c90c-41f4-be1e-e24346153937") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("ad10aa90-58ff-4694-b9fd-a6333e3af5f2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("5ab5cb8b-74d5-43d2-a65c-773c21778f81") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("e5828ca8-7f35-4ea1-80f9-6e0bfc0736fb") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("9607f741-c90c-41f4-be1e-e24346153937") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("ad10aa90-58ff-4694-b9fd-a6333e3af5f2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("5ab5cb8b-74d5-43d2-a65c-773c21778f81") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("e5828ca8-7f35-4ea1-80f9-6e0bfc0736fb") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("9607f741-c90c-41f4-be1e-e24346153937") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("ad10aa90-58ff-4694-b9fd-a6333e3af5f2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("5ab5cb8b-74d5-43d2-a65c-773c21778f81") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+<style>
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;height:100%}
+  ::-webkit-scrollbar{width:9px;height:9px}
+  ::-webkit-scrollbar-thumb{background:rgba(140,140,160,.35);border-radius:9px}
+  ::-webkit-scrollbar-track{background:transparent}
+  @keyframes msgIn{from{opacity:0;transform:translateY(11px) scale(.985)}to{opacity:1;transform:none}}
+  @keyframes pop{0%{transform:scale(.55);opacity:0}65%{transform:scale(1.12)}100%{transform:scale(1);opacity:1}}
+  @keyframes dotb{0%,60%,100%{transform:translateY(0);opacity:.45}30%{transform:translateY(-5px);opacity:1}}
+  @keyframes floatIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  @keyframes bob{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-12px) rotate(3deg)}}
+  @keyframes glowPulse{0%,100%{box-shadow:0 6px 18px rgba(255,106,61,.35)}50%{box-shadow:0 6px 26px rgba(255,106,61,.6)}}
+</style>
+</helmet>
+<div style="display:flex;height:100vh;width:100vw;overflow:hidden;font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:{{ t.appBg }};transition:background .45s ease">
+
+  <!-- SERVER RAIL -->
+  <div style="width:74px;flex:none;display:flex;flex-direction:column;align-items:center;gap:13px;padding:15px 0;background:{{ t.rail }};border-right:1px solid {{ t.railBorder }};transition:background .45s ease;z-index:3">
+    <div style="width:48px;height:48px;border-radius:16px;display:flex;align-items:center;justify-content:center;font:800 22px 'Plus Jakarta Sans';color:#fff;background:{{ t.accentGrad }};box-shadow:{{ t.glow }};cursor:pointer;transition:transform .16s,border-radius .16s" style-hover="transform:translateY(-2px)">C</div>
+    <div style="width:26px;height:2px;border-radius:2px;background:{{ t.divider }}"></div>
+    <div style="width:48px;height:48px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:22px;background:{{ t.input }};border:1px solid {{ t.inputBorder }};cursor:pointer;transition:transform .16s,border-radius .16s" style-hover="transform:translateY(-2px);border-radius:13px">🎮</div>
+    <div style="width:48px;height:48px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:22px;background:{{ t.input }};border:1px solid {{ t.inputBorder }};cursor:pointer;transition:transform .16s,border-radius .16s" style-hover="transform:translateY(-2px);border-radius:13px">💻</div>
+    <div style="width:48px;height:48px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:22px;background:{{ t.input }};border:1px solid {{ t.inputBorder }};cursor:pointer;transition:transform .16s,border-radius .16s" style-hover="transform:translateY(-2px);border-radius:13px">🎵</div>
+    <div style="width:48px;height:48px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:22px;background:{{ t.input }};border:1px solid {{ t.inputBorder }};cursor:pointer;transition:transform .16s,border-radius .16s" style-hover="transform:translateY(-2px);border-radius:13px">🎨</div>
+    <div style="width:48px;height:48px;border-radius:16px;display:flex;align-items:center;justify-content:center;font:300 28px 'Plus Jakarta Sans';color:{{ t.accent }};background:transparent;border:2px dashed {{ t.inputBorder }};cursor:pointer;transition:transform .16s" style-hover="transform:translateY(-2px)">+</div>
+  </div>
+
+  <!-- CHANNEL SIDEBAR -->
+  <div data-screen-label="Sidebar" style="width:264px;flex:none;display:flex;flex-direction:column;background:{{ t.side }};border-right:1px solid {{ t.divider }};transition:background .45s ease;z-index:2">
+    <button style="display:flex;align-items:center;gap:8px;width:100%;border:none;cursor:pointer;background:transparent;padding:18px 18px 16px;border-bottom:1px solid {{ t.divider }};color:{{ t.text }};transition:background .15s" style-hover="background:{{ t.hover }}">
+      <span style="font:800 18px 'Plus Jakarta Sans'">Chatrix</span>
+      <span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:6px;background:{{ t.accent }};color:#fff;font-size:9px;font-weight:800;letter-spacing:.3px;margin-left:2px">PRO</span>
+      <span style="flex:1"></span>
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="color:{{ t.muted }}"><path d="m6 9 6 6 6-6"></path></svg>
+    </button>
+    <div style="flex:1;overflow-y:auto;padding:14px 10px">
+      <div style="display:flex;align-items:center;justify-content:space-between;padding:2px 8px 8px">
+        <span style="font:800 11px 'Plus Jakarta Sans';letter-spacing:1px;color:{{ t.faint }}">TEXT CHANNELS</span>
+        <span style="font-size:18px;line-height:1;color:{{ t.faint }};cursor:pointer">+</span>
+      </div>
+      <sc-for list="{{ channels }}" as="c" hint-placeholder-count="7">
+        <button onclick="{{ c.onClick }}" style="{{ c.itemStyle }}" style-hover="background:{{ t.hover }}">
+          <span style="font-size:16px;line-height:1;width:18px;text-align:center">{{ c.icon }}</span>
+          <span style="flex:1;text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ c.name }}</span>
+          <sc-if value="{{ c.badge }}" hint-placeholder-val="{{ false }}">
+            <span style="{{ c.badgeStyle }}">{{ c.badge }}</span>
+          </sc-if>
+        </button>
+      </sc-for>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px;padding:10px 12px;border-top:1px solid {{ t.divider }};background:{{ t.panel }};transition:background .45s ease">
+      <div style="position:relative;flex:none">
+        <div style="width:38px;height:38px;border-radius:12px;display:flex;align-items:center;justify-content:center;font:800 15px 'Plus Jakarta Sans';color:#fff;background:{{ t.accentGrad }}">M</div>
+        <span style="position:absolute;right:-2px;bottom:-2px;width:13px;height:13px;border-radius:50%;background:#2ecc71;border:2.5px solid {{ t.panel }}"></span>
+      </div>
+      <div style="flex:1;min-width:0">
+        <div style="font:700 13.5px 'Plus Jakarta Sans';color:{{ t.text }};white-space:nowrap;overflow:hidden;text-overflow:ellipsis">mkt-76</div>
+        <div style="font:600 11.5px 'Plus Jakarta Sans';color:#2ecc71">Online</div>
+      </div>
+      <div style="display:flex;gap:2px">
+        <button style="{{ footBtn }}" style-hover="background:{{ t.hover }};color:{{ t.text }}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"></rect><path d="M5 11a7 7 0 0 0 14 0"></path><path d="M12 18v3"></path></svg></button>
+        <button style="{{ footBtn }}" style-hover="background:{{ t.hover }};color:{{ t.text }}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13v-1a8 8 0 0 1 16 0v1"></path><rect x="2.5" y="13" width="4" height="6" rx="2"></rect><rect x="17.5" y="13" width="4" height="6" rx="2"></rect></svg></button>
+        <button style="{{ footBtn }}" style-hover="background:{{ t.hover }};color:{{ t.text }}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"></path></svg></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <div data-screen-label="Chat" style="flex:1;display:flex;flex-direction:column;min-width:0">
+    <!-- header -->
+    <div style="height:66px;flex:none;display:flex;align-items:center;gap:13px;padding:0 18px;border-bottom:1px solid {{ t.divider }};background:{{ t.header }};backdrop-filter:blur(14px);transition:background .45s ease;z-index:1">
+      <span style="font:800 19px 'Plus Jakarta Sans';color:{{ t.accent }}">#</span>
+      <span style="font:800 17px 'Plus Jakarta Sans';color:{{ t.text }}">{{ channelName }}</span>
+      <span style="width:1px;height:20px;background:{{ t.divider }}"></span>
+      <span style="font:600 13.5px 'Plus Jakarta Sans';color:{{ t.muted }};white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:240px">{{ channelTopic }}</span>
+      <span style="flex:1"></span>
+      <div style="display:flex;gap:3px;background:{{ t.input }};border:1px solid {{ t.inputBorder }};border-radius:13px;padding:3px;margin-right:4px">
+        <sc-for list="{{ themeBtns }}" as="b" hint-placeholder-count="3">
+          <button onclick="{{ b.onClick }}" title="{{ b.label }}" style="{{ b.style }}">{{ b.icon }}</button>
+        </sc-for>
+      </div>
+      <button style="{{ iconBtn }}" style-hover="background:{{ t.hover }};color:{{ t.text }}"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="13" height="12" rx="3"></rect><path d="m15 10 6-3v10l-6-3"></path></svg></button>
+      <button onclick="{{ toggleMembers }}" style="{{ membersBtn }}" style-hover="background:{{ t.hover }}"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"></circle><path d="M3.5 19a5.5 5.5 0 0 1 11 0"></path><path d="M16 5.5a3 3 0 0 1 0 5.8"></path><path d="M16.5 19a5 5 0 0 1 4-5"></path></svg></button>
+      <button style="{{ iconBtn }}" style-hover="background:{{ t.hover }};color:{{ t.text }}"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9a6 6 0 0 1 12 0c0 5 2 6 2 6H4s2-1 2-6Z"></path><path d="M10.5 19a2 2 0 0 0 3 0"></path></svg></button>
+      <div style="display:flex;align-items:center;gap:7px;background:{{ t.input }};border:1px solid {{ t.inputBorder }};border-radius:11px;padding:8px 12px;width:148px;margin-left:4px">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" style="color:{{ t.faint }}"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3-3"></path></svg>
+        <span style="font:600 13px 'Plus Jakarta Sans';color:{{ t.faint }}">Search</span>
+      </div>
+    </div>
+
+    <!-- message feed -->
+    <div ref="{{ scrollRef }}" style="flex:1;overflow-y:auto;padding:18px 30px 8px;display:flex;flex-direction:column;background:{{ t.chatBg }};transition:background .45s ease">
+
+      <sc-if value="{{ notFound }}" hint-placeholder-val="{{ true }}">
+        <sc-if value="{{ hasMessages }}" hint-placeholder-val="{{ true }}">
+          <div style="display:flex;align-items:center;gap:14px;margin:8px 0 4px">
+            <div style="flex:1;height:1px;background:{{ t.divider }}"></div>
+            <span style="font:800 11px 'Plus Jakarta Sans';letter-spacing:.6px;color:{{ t.faint }};padding:4px 14px;border:1px solid {{ t.divider }};border-radius:20px;background:{{ t.panel }}">TODAY</span>
+            <div style="flex:1;height:1px;background:{{ t.divider }}"></div>
+          </div>
+
+          <sc-for list="{{ rows }}" as="m" hint-placeholder-count="4">
+            <!-- incoming -->
+            <sc-if value="{{ m.notMe }}" hint-placeholder-val="{{ true }}">
+              <div onmouseenter="{{ m.onEnter }}" onmouseleave="{{ onLeave }}" style="position:relative;display:flex;gap:12px;margin-top:16px;max-width:80%;align-self:flex-start;animation:msgIn .34s cubic-bezier(.2,.8,.2,1) both">
+                <div style="{{ m.avatarStyle }}">{{ m.initial }}</div>
+                <div style="display:flex;flex-direction:column;align-items:flex-start;min-width:0">
+                  <div style="display:flex;align-items:baseline;gap:8px;margin-bottom:5px">
+                    <span style="font:700 14px 'Plus Jakarta Sans';color:{{ t.text }}">{{ m.author }}</span>
+                    <span style="font:600 11.5px 'Plus Jakarta Sans';color:{{ t.faint }}">{{ m.time }}</span>
+                  </div>
+                  <div style="{{ m.bubbleStyle }}">{{ m.text }}</div>
+                  <sc-if value="{{ m.hasReactions }}" hint-placeholder-val="{{ false }}">
+                    <div style="display:flex;gap:6px;margin-top:7px;flex-wrap:wrap">
+                      <sc-for list="{{ m.reactions }}" as="r" hint-placeholder-count="0">
+                        <button onclick="{{ r.onClick }}" style="{{ r.style }}">{{ r.label }}</button>
+                      </sc-for>
+                    </div>
+                  </sc-if>
+                </div>
+                <sc-if value="{{ m.hovered }}" hint-placeholder-val="{{ false }}">
+                  <div style="position:absolute;top:-16px;left:50px;display:flex;gap:1px;background:{{ t.panel }};border:1px solid {{ t.divider }};border-radius:22px;padding:4px 7px;box-shadow:{{ t.cardShadow }};z-index:6;animation:pop .16s ease both">
+                    <sc-for list="{{ m.pickers }}" as="p" hint-placeholder-count="5">
+                      <button onclick="{{ p.onClick }}" style="border:none;background:transparent;font-size:17px;cursor:pointer;padding:3px 4px;border-radius:9px;line-height:1;transition:transform .12s" style-hover="transform:scale(1.4)">{{ p.emoji }}</button>
+                    </sc-for>
+                  </div>
+                </sc-if>
+              </div>
+            </sc-if>
+            <!-- outgoing -->
+            <sc-if value="{{ m.me }}" hint-placeholder-val="{{ false }}">
+              <div onmouseenter="{{ m.onEnter }}" onmouseleave="{{ onLeave }}" style="position:relative;display:flex;flex-direction:column;align-items:flex-end;margin-top:16px;max-width:80%;align-self:flex-end;animation:msgIn .34s cubic-bezier(.2,.8,.2,1) both">
+                <div style="display:flex;align-items:baseline;gap:8px;margin-bottom:5px">
+                  <span style="font:600 11.5px 'Plus Jakarta Sans';color:{{ t.faint }}">{{ m.time }}</span>
+                  <span style="font:700 14px 'Plus Jakarta Sans';color:{{ t.accent }}">You</span>
+                </div>
+                <div style="{{ m.bubbleStyle }}">{{ m.text }}</div>
+                <sc-if value="{{ m.hasReactions }}" hint-placeholder-val="{{ false }}">
+                  <div style="display:flex;gap:6px;margin-top:7px;flex-wrap:wrap;justify-content:flex-end">
+                    <sc-for list="{{ m.reactions }}" as="r" hint-placeholder-count="0">
+                      <button onclick="{{ r.onClick }}" style="{{ r.style }}">{{ r.label }}</button>
+                    </sc-for>
+                  </div>
+                </sc-if>
+                <sc-if value="{{ m.hovered }}" hint-placeholder-val="{{ false }}">
+                  <div style="position:absolute;top:-16px;right:0;display:flex;gap:1px;background:{{ t.panel }};border:1px solid {{ t.divider }};border-radius:22px;padding:4px 7px;box-shadow:{{ t.cardShadow }};z-index:6;animation:pop .16s ease both">
+                    <sc-for list="{{ m.pickers }}" as="p" hint-placeholder-count="5">
+                      <button onclick="{{ p.onClick }}" style="border:none;background:transparent;font-size:17px;cursor:pointer;padding:3px 4px;border-radius:9px;line-height:1;transition:transform .12s" style-hover="transform:scale(1.4)">{{ p.emoji }}</button>
+                    </sc-for>
+                  </div>
+                </sc-if>
+              </div>
+            </sc-if>
+          </sc-for>
+
+          <sc-if value="{{ typing }}" hint-placeholder-val="{{ false }}">
+            <div style="display:flex;gap:12px;margin-top:16px;align-self:flex-start;animation:floatIn .3s ease both">
+              <div style="{{ typingAvatar }}">{{ typingInitial }}</div>
+              <div style="display:flex;flex-direction:column;align-items:flex-start">
+                <span style="font:600 11.5px 'Plus Jakarta Sans';color:{{ t.faint }};margin-bottom:5px">{{ typingName }} is typing…</span>
+                <div style="display:flex;align-items:center;gap:5px;background:{{ t.bubbleOther }};border:1px solid {{ t.divider }};border-radius:18px 18px 18px 6px;padding:14px 17px;box-shadow:{{ t.cardShadow }}">
+                  <span style="width:7px;height:7px;border-radius:50%;background:{{ t.muted }};animation:dotb 1.2s infinite"></span>
+                  <span style="width:7px;height:7px;border-radius:50%;background:{{ t.muted }};animation:dotb 1.2s infinite .2s"></span>
+                  <span style="width:7px;height:7px;border-radius:50%;background:{{ t.muted }};animation:dotb 1.2s infinite .4s"></span>
+                </div>
+              </div>
+            </div>
+          </sc-if>
+        </sc-if>
+
+        <sc-if value="{{ isEmpty }}" hint-placeholder-val="{{ false }}">
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px;animation:floatIn .45s ease both">
+            <div style="width:104px;height:104px;border-radius:32px;display:flex;align-items:center;justify-content:center;font-size:52px;background:{{ t.accentGrad }};box-shadow:{{ t.glow }};margin-bottom:24px">🎈</div>
+            <h2 style="font:800 24px 'Plus Jakarta Sans';color:{{ t.text }};margin:0 0 8px">It's quiet in #{{ channelName }}</h2>
+            <p style="font:500 15px 'Plus Jakarta Sans';color:{{ t.muted }};margin:0;max-width:340px;line-height:1.5">Be the first to break the ice. Say hello, drop an idea, or just vibe. 👇</p>
+            <div style="display:flex;gap:10px;margin-top:24px">
+              <button onclick="{{ quickWave }}" style="{{ quickBtn }}" style-hover="transform:translateY(-2px)">👋 Say hi</button>
+              <button onclick="{{ quickFire }}" style="{{ quickBtn }}" style-hover="transform:translateY(-2px)">🔥 Hype it up</button>
+              <button onclick="{{ quickIdea }}" style="{{ quickBtn }}" style-hover="transform:translateY(-2px)">💡 Share an idea</button>
+            </div>
+          </div>
+        </sc-if>
+      </sc-if>
+
+      <sc-if value="{{ is404 }}" hint-placeholder-val="{{ false }}">
+        <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px;animation:floatIn .45s ease both">
+          <div style="font-size:78px;animation:bob 3.4s ease-in-out infinite;margin-bottom:6px">🛰️</div>
+          <div style="font:800 84px 'Plus Jakarta Sans';line-height:1;background:{{ t.accentGrad }};-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:10px">404</div>
+          <h2 style="font:800 24px 'Plus Jakarta Sans';color:{{ t.text }};margin:0 0 8px">This channel drifted into deep space</h2>
+          <p style="font:500 15px 'Plus Jakarta Sans';color:{{ t.muted }};margin:0;max-width:380px;line-height:1.5">We looked everywhere, but <strong style="color:{{ t.text }}">#archive</strong> is lost somewhere among the stars.</p>
+          <button onclick="{{ goGeneral }}" style="margin-top:26px;border:none;cursor:pointer;padding:14px 26px;border-radius:14px;font:700 15px 'Plus Jakarta Sans';color:#fff;background:{{ t.accentGrad }};box-shadow:{{ t.glow }};transition:transform .16s" style-hover="transform:translateY(-2px)">Beam me back to #general</button>
+        </div>
+      </sc-if>
+    </div>
+
+    <!-- composer -->
+    <sc-if value="{{ notFound }}" hint-placeholder-val="{{ true }}">
+      <div style="flex:none;padding:12px 30px 20px">
+        <div style="display:flex;align-items:center;gap:10px;background:{{ t.input }};border:1px solid {{ t.inputBorder }};border-radius:17px;padding:8px 10px 8px 14px;box-shadow:{{ t.cardShadow }};transition:background .45s ease">
+          <button style="{{ composerIcon }}" style-hover="background:{{ t.hover }};color:{{ t.accent }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5 12 20a5 5 0 0 1-7-7l8.5-8.5a3.3 3.3 0 0 1 4.7 4.7L9 17a1.6 1.6 0 0 1-2.3-2.3l8-8"></path></svg></button>
+          <input value="{{ draft }}" oninput="{{ onDraft }}" onkeydown="{{ onKey }}" placeholder="Message #{{ channelName }}" style="flex:1;border:none;background:transparent;color:{{ t.text }};font:500 14.5px 'Plus Jakarta Sans';outline:none;padding:9px 2px">
+          <button onclick="{{ composerEmoji }}" style="border:none;background:transparent;font-size:20px;cursor:pointer;padding:5px;border-radius:10px;transition:transform .14s" style-hover="transform:scale(1.2)">😊</button>
+          <button onclick="{{ send }}" style="{{ sendStyle }}"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"></path><path d="M22 2 15 22l-4-9-9-4 20-7Z"></path></svg></button>
+        </div>
+      </div>
+    </sc-if>
+  </div>
+
+  <!-- MEMBER PANEL -->
+  <sc-if value="{{ showMembers }}" hint-placeholder-val="{{ true }}">
+    <div data-screen-label="Members" style="width:248px;flex:none;display:flex;flex-direction:column;background:{{ t.side }};border-left:1px solid {{ t.divider }};padding:16px 12px;overflow-y:auto;transition:background .45s ease;animation:floatIn .3s ease both">
+      <div style="font:800 11px 'Plus Jakarta Sans';letter-spacing:1px;color:{{ t.faint }};padding:4px 10px 10px">ONLINE — {{ onlineCount }}</div>
+      <sc-for list="{{ online }}" as="u" hint-placeholder-count="4">
+        <div style="display:flex;align-items:center;gap:11px;padding:7px 10px;border-radius:12px;cursor:pointer;transition:background .15s" style-hover="background:{{ t.hover }}">
+          <div style="position:relative;flex:none">
+            <div style="{{ u.avatarStyle }}">{{ u.initial }}</div>
+            <span style="{{ u.dotStyle }}"></span>
+          </div>
+          <div style="min-width:0">
+            <div style="font:700 13.5px 'Plus Jakarta Sans';color:{{ t.text }};white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ u.name }}</div>
+            <div style="font:600 11.5px 'Plus Jakarta Sans';color:{{ t.muted }};white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ u.role }}</div>
+          </div>
+        </div>
+      </sc-for>
+      <div style="font:800 11px 'Plus Jakarta Sans';letter-spacing:1px;color:{{ t.faint }};padding:18px 10px 10px">OFFLINE — {{ offlineCount }}</div>
+      <sc-for list="{{ offline }}" as="u" hint-placeholder-count="2">
+        <div style="display:flex;align-items:center;gap:11px;padding:7px 10px;border-radius:12px;cursor:pointer;opacity:.5;transition:background .15s,opacity .15s" style-hover="background:{{ t.hover }};opacity:.8">
+          <div style="position:relative;flex:none"><div style="{{ u.avatarStyle }}">{{ u.initial }}</div></div>
+          <div style="min-width:0">
+            <div style="font:700 13.5px 'Plus Jakarta Sans';color:{{ t.text }};white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ u.name }}</div>
+            <div style="font:600 11.5px 'Plus Jakarta Sans';color:{{ t.muted }}">{{ u.role }}</div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script="" data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;height&quot;:&quot;100%&quot;},&quot;defaultTheme&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;midnight&quot;,&quot;daylight&quot;,&quot;candy&quot;],&quot;default&quot;:&quot;midnight&quot;,&quot;tsType&quot;:&quot;'midnight'|'daylight'|'candy'&quot;},&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#FF6A3D&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;membersOpen&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;}}">
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.scrollEl = null;
+    this.EMOJIS = ['👍','❤️','😂','🔥','🎉'];
+    this.REPLIES = ['Nice one! 😄','Got it 👍','lol same here','On it now 💪','Sounds good to me','haha 🔥','Love that idea 💡','Brb in 5','Totally agree','wait really? 👀'];
+    this.NAMES = [
+      { name:'Aiko', initial:'A', color:'#FF6A88' },
+      { name:'Ren', initial:'R', color:'#7C5CFF' },
+      { name:'Mika', initial:'M', color:'#00C2A8' },
+    ];
+    this.CHANNELS = [
+      { id:'general', name:'general', icon:'💬', badge:'Now' },
+      { id:'ideas', name:'ideas', icon:'💡' },
+      { id:'design', name:'design', icon:'🎨' },
+      { id:'gaming', name:'gaming', icon:'🎮', badge:'3' },
+      { id:'music', name:'music', icon:'🎵' },
+      { id:'random', name:'random', icon:'🎲' },
+      { id:'archive', name:'archive', icon:'🗄️' },
+    ];
+    this.TOPICS = {
+      general:'Team-wide chatter & daily standup',
+      ideas:'Half-baked thoughts welcome',
+      design:'Crits, mocks & inspo',
+      gaming:'LFG · squad up tonight',
+      music:'What are you listening to?',
+      random:'Off-topic & memes',
+      archive:'',
+    };
+    this.THEMES = {
+      midnight: {
+        name:'Midnight', icon:'🌙',
+        appBg:'radial-gradient(1100px 560px at 72% -12%, #28304a 0%, #0e1015 58%)',
+        rail:'#13151d', railBorder:'rgba(255,255,255,.05)',
+        side:'#171a23', chatBg:'linear-gradient(180deg,#1a1d27,#15171f)',
+        header:'rgba(23,26,35,.72)', panel:'#1b1f2b',
+        bubbleOther:'#262b39', bubbleOtherText:'#e9ebf2',
+        text:'#edeff5', muted:'#8b92a6', faint:'#5b6175',
+        divider:'rgba(255,255,255,.08)',
+        input:'#212533', inputBorder:'rgba(255,255,255,.07)',
+        hover:'rgba(255,255,255,.06)',
+        cardShadow:'0 3px 14px rgba(0,0,0,.32)',
+      },
+      daylight: {
+        name:'Daylight', icon:'☀️',
+        appBg:'#e9ecf4',
+        rail:'#fff7f3', railBorder:'rgba(0,0,0,.06)',
+        side:'#ffffff', chatBg:'linear-gradient(180deg,#fbfcff,#f3f5fb)',
+        header:'rgba(255,255,255,.82)', panel:'#ffffff',
+        bubbleOther:'#ffffff', bubbleOtherText:'#1a1d27',
+        text:'#1a1d27', muted:'#6b7180', faint:'#a5abba',
+        divider:'rgba(20,24,40,.08)',
+        input:'#f1f3ف9', inputBorder:'rgba(20,24,40,.1)',
+        hover:'rgba(20,24,40,.045)',
+        cardShadow:'0 3px 14px rgba(30,40,80,.07)',
+      },
+      candy: {
+        name:'Bubble', icon:'🫧',
+        appBg:'linear-gradient(155deg,#fff0f6 0%,#eef1ff 52%,#f1fbff 100%)',
+        rail:'linear-gradient(180deg,#ff8e53,#ff5e8a)', railBorder:'rgba(255,255,255,.3)',
+        side:'rgba(255,255,255,.74)', chatBg:'transparent',
+        header:'rgba(255,255,255,.62)', panel:'rgba(255,255,255,.92)',
+        bubbleOther:'#ffffff', bubbleOtherText:'#3a3450',
+        text:'#332c4a', muted:'#897fa8', faint:'#b6aecf',
+        divider:'rgba(130,100,170,.14)',
+        input:'rgba(255,255,255,.85)', inputBorder:'rgba(150,120,190,.22)',
+        hover:'rgba(150,120,190,.1)',
+        cardShadow:'0 6px 20px rgba(150,120,190,.18)',
+      },
+    };
+    // fix accidental non-ascii token
+    this.THEMES.daylight.input = '#f1f3f9';
+
+    this.state = {
+      theme: this.THEMES[props.defaultTheme] ? props.defaultTheme : 'midnight',
+      channel: 'general',
+      hovered: null,
+      draft: '',
+      showMembers: props.membersOpen !== false,
+      typing: false,
+      typingPerson: this.NAMES[0],
+      msgs: this.seed(),
+    };
+  }
+
+  seed() {
+    return {
+      general: [
+        { id:'g1', me:false, ...this.NAMES[0], text:'Morning team! Just pushed the new build 🚀', time:'09:12', reactions:[{emoji:'🔥',count:3,mine:false},{emoji:'🎉',count:1,mine:true}] },
+        { id:'g2', me:true, text:'hello fen 123', time:'16:47', reactions:[] },
+        { id:'g3', me:false, ...this.NAMES[1], text:'hahaha', time:'16:47', reactions:[{emoji:'😂',count:2,mine:false}] },
+        { id:'g4', me:true, text:'test delay 123', time:'16:47', reactions:[] },
+      ],
+      ideas: [
+        { id:'i1', me:false, ...this.NAMES[2], text:'What if reactions floated up like bubbles? ✨', time:'14:02', reactions:[{emoji:'💡',count:2,mine:false}] },
+        { id:'i2', me:true, text:'ooh I like that a lot', time:'14:05', reactions:[] },
+      ],
+      design: [
+        { id:'d1', me:false, ...this.NAMES[1], text:'New color palette is up in Figma, take a look 🎨', time:'11:20', reactions:[{emoji:'❤️',count:4,mine:true}] },
+      ],
+      gaming: [
+        { id:'gm1', me:false, ...this.NAMES[0], text:'anyone up for ranked tonight? 🎮', time:'20:30', reactions:[{emoji:'👍',count:3,mine:false}] },
+        { id:'gm2', me:false, ...this.NAMES[2], text:'count me in', time:'20:31', reactions:[] },
+        { id:'gm3', me:true, text:'lets gooo, queue at 9?', time:'20:32', reactions:[{emoji:'🔥',count:2,mine:false}] },
+      ],
+      music: [],
+      random: [
+        { id:'r1', me:false, ...this.NAMES[2], text:'my coffee just achieved sentience ☕', time:'08:45', reactions:[{emoji:'😂',count:5,mine:true}] },
+      ],
+      archive: [],
+    };
+  }
+
+  now() {
+    const d = new Date();
+    return String(d.getHours()).padStart(2,'0') + ':' + String(d.getMinutes()).padStart(2,'0');
+  }
+  av(color, size) {
+    return `width:${size}px;height:${size}px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;font:800 ${Math.round(size*0.38)}px 'Plus Jakarta Sans';color:#fff;background:linear-gradient(135deg, color-mix(in srgb, ${color} 78%, #ffffff), ${color});box-shadow:0 3px 10px color-mix(in srgb, ${color} 45%, transparent)`;
+  }
+
+  switchChannel(id) {
+    clearTimeout(this._t1); clearTimeout(this._t2);
+    this.setState({ channel:id, hovered:null, typing:false, draft:'' });
+  }
+  goGeneral = () => this.switchChannel('general');
+  toggleMembers = () => this.setState(s => ({ showMembers: !s.showMembers }));
+  setHovered = (id) => this.setState({ hovered:id });
+  onLeave = () => this.setState({ hovered:null });
+  onDraft = (e) => this.setState({ draft:e.target.value });
+  onKey = (e) => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); this.send(); } };
+  composerEmoji = () => this.setState(s => ({ draft: s.draft + '😊' }));
+
+  pushMine(text) {
+    const ch = this.state.channel;
+    const msg = { id:'m'+Date.now(), me:true, text, time:this.now(), reactions:[] };
+    this.setState(s => ({ msgs: { ...s.msgs, [ch]: [...(s.msgs[ch]||[]), msg] }, draft:'' }));
+    this.scheduleReply(ch);
+  }
+  send = () => { const t = this.state.draft.trim(); if (t) this.pushMine(t); };
+  quickWave = () => this.pushMine('Hey everyone 👋');
+  quickFire = () => this.pushMine("Let's gooo 🔥🔥");
+  quickIdea = () => this.pushMine('I had an idea 💡');
+
+  scheduleReply(ch) {
+    clearTimeout(this._t1); clearTimeout(this._t2);
+    const person = this.NAMES[Math.floor(Math.random()*this.NAMES.length)];
+    this._t1 = setTimeout(() => {
+      if (this.state.channel === ch) this.setState({ typing:true, typingPerson:person });
+    }, 550);
+    this._t2 = setTimeout(() => {
+      const text = this.REPLIES[Math.floor(Math.random()*this.REPLIES.length)];
+      this.setState(s => {
+        const reply = { id:'rep'+Date.now(), me:false, name:person.name, initial:person.initial, color:person.color, text, time:this.now(), reactions:[] };
+        return { typing:false, msgs: { ...s.msgs, [ch]: [...(s.msgs[ch]||[]), reply] } };
+      });
+    }, 2100);
+  }
+
+  react(id, emoji) {
+    const ch = this.state.channel;
+    this.setState(s => {
+      const list = (s.msgs[ch]||[]).map(m => {
+        if (m.id !== id) return m;
+        const rs = (m.reactions||[]).map(r => ({ ...r }));
+        const ex = rs.find(r => r.emoji === emoji);
+        if (!ex) rs.push({ emoji, count:1, mine:true });
+        else if (ex.mine) { ex.count -= 1; ex.mine = false; }
+        else { ex.count += 1; ex.mine = true; }
+        return { ...m, reactions: rs.filter(r => r.count > 0) };
+      });
+      return { msgs: { ...s.msgs, [ch]: list } };
+    });
+  }
+
+  componentDidMount() { this.toBottom(); }
+  componentDidUpdate() {
+    const s = this.state;
+    const sig = s.channel + ':' + ((s.msgs[s.channel]||[]).length) + ':' + s.typing;
+    if (sig !== this._sig) { this._sig = sig; this.toBottom(); }
+  }
+  toBottom() { if (this.scrollEl) this.scrollEl.scrollTop = this.scrollEl.scrollHeight; }
+
+  renderVals() {
+    const s = this.state;
+    const base = this.THEMES[s.theme];
+    const accent = this.props.accent || '#ff6a3d';
+    const t = {
+      ...base,
+      accent,
+      accentGrad: `linear-gradient(135deg, color-mix(in srgb, ${accent} 70%, #ffffff), ${accent})`,
+      active: `color-mix(in srgb, ${accent} 15%, transparent)`,
+      glow: `0 6px 22px color-mix(in srgb, ${accent} 42%, transparent)`,
+    };
+
+    const channels = this.CHANNELS.map(c => {
+      const active = c.id === s.channel;
+      const isNow = c.badge === 'Now';
+      return {
+        ...c,
+        onClick: () => this.switchChannel(c.id),
+        itemStyle: `display:flex;align-items:center;gap:10px;width:100%;border:none;cursor:pointer;padding:10px 11px;margin:2px 0;border-radius:12px;font:700 14.5px 'Plus Jakarta Sans';transition:background .16s,color .16s;background:${active ? t.active : 'transparent'};color:${active ? t.accent : t.muted}`,
+        badgeStyle: isNow
+          ? `font:800 10px 'Plus Jakarta Sans';color:#fff;background:${accent};padding:2px 8px;border-radius:20px;letter-spacing:.3px`
+          : `font:800 11px 'Plus Jakarta Sans';color:#fff;background:#e8493f;min-width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;border-radius:50%;padding:0 5px`,
+      };
+    });
+
+    const deriveMsg = (m) => {
+      const me = !!m.me;
+      const bubbleStyle = me
+        ? `background:${t.accentGrad};color:#fff;padding:11px 15px;border-radius:18px 18px 6px 18px;font:500 14.5px/1.5 'Plus Jakarta Sans';box-shadow:${t.glow};max-width:540px;word-break:break-word`
+        : `background:${t.bubbleOther};color:${t.bubbleOtherText};padding:11px 15px;border-radius:18px 18px 18px 6px;font:500 14.5px/1.5 'Plus Jakarta Sans';border:1px solid ${t.divider};box-shadow:${t.cardShadow};max-width:540px;word-break:break-word`;
+      const reactions = (m.reactions||[]).map(r => ({
+        label: r.emoji + ' ' + r.count,
+        onClick: () => this.react(m.id, r.emoji),
+        style: `display:inline-flex;align-items:center;gap:4px;border-radius:11px;padding:3px 9px;cursor:pointer;font:700 12.5px 'Plus Jakarta Sans';transition:transform .14s,background .14s;border:1px solid ${r.mine ? t.accent : t.divider};background:${r.mine ? t.active : 'transparent'};color:${r.mine ? t.accent : t.muted}`,
+      }));
+      return {
+        ...m, me, notMe: !me,
+        author: m.name || 'Unknown',
+        align: me ? 'flex-end' : 'flex-start',
+        avatarStyle: this.av(m.color || '#7C5CFF', 42),
+        bubbleStyle,
+        hovered: s.hovered === m.id,
+        onEnter: () => this.setHovered(m.id),
+        reactions, hasReactions: reactions.length > 0,
+        pickers: this.EMOJIS.map(e => ({ emoji:e, onClick: () => this.react(m.id, e) })),
+      };
+    };
+
+    const list = s.msgs[s.channel] || [];
+    const rows = list.map(deriveMsg);
+    const is404 = s.channel === 'archive';
+    const hasMessages = !is404 && list.length > 0;
+    const isEmpty = !is404 && list.length === 0;
+
+    const themeBtns = Object.keys(this.THEMES).map(k => {
+      const active = s.theme === k;
+      return {
+        key:k, icon:this.THEMES[k].icon, label:this.THEMES[k].name,
+        onClick: () => this.setState({ theme:k }),
+        style: `border:none;cursor:pointer;width:34px;height:30px;border-radius:10px;font-size:15px;display:flex;align-items:center;justify-content:center;transition:all .18s;background:${active ? t.accentGrad : 'transparent'};box-shadow:${active ? t.glow : 'none'};filter:${active ? 'none' : 'grayscale(.4) opacity(.65)'}`,
+      };
+    });
+
+    const mkUser = (u, online) => ({
+      ...u,
+      avatarStyle: this.av(u.color, 38),
+      dotStyle: `position:absolute;right:-2px;bottom:-2px;width:12px;height:12px;border-radius:50%;background:${online ? '#2ecc71' : '#9aa0ad'};border:2.5px solid ${base.side.indexOf('rgba')===0 ? '#ffffff' : base.side}`,
+    });
+    const online = [
+      mkUser({ name:'Aiko', initial:'A', color:'#FF6A88', role:'Playing Valorant' }, true),
+      mkUser({ name:'Ren', initial:'R', color:'#7C5CFF', role:'Designing in Figma' }, true),
+      mkUser({ name:'Mika', initial:'M', color:'#00C2A8', role:'Listening to Lo-fi' }, true),
+      mkUser({ name:'mkt-76', initial:'M', color:accent, role:'Online' }, true),
+    ];
+    const offline = [
+      mkUser({ name:'Sora', initial:'S', color:'#8890a0', role:'Offline' }, false),
+      mkUser({ name:'Kai', initial:'K', color:'#8890a0', role:'Offline' }, false),
+    ];
+
+    const iconBtn = `border:none;background:transparent;cursor:pointer;width:38px;height:38px;border-radius:11px;display:flex;align-items:center;justify-content:center;color:${t.muted};transition:background .15s,color .15s`;
+    const membersBtn = `border:none;cursor:pointer;width:38px;height:38px;border-radius:11px;display:flex;align-items:center;justify-content:center;transition:background .15s,color .15s;background:${s.showMembers ? t.active : 'transparent'};color:${s.showMembers ? t.accent : t.muted}`;
+    const canSend = s.draft.trim().length > 0;
+
+    return {
+      t,
+      channels,
+      channelName: (this.CHANNELS.find(c => c.id === s.channel) || {}).name || 'general',
+      channelTopic: this.TOPICS[s.channel] || '',
+      rows, is404, hasMessages, isEmpty, notFound: !is404,
+      typing: s.typing,
+      typingName: s.typingPerson.name,
+      typingInitial: s.typingPerson.initial,
+      typingAvatar: this.av(s.typingPerson.color, 42),
+      themeBtns,
+      online, offline,
+      onlineCount: online.length, offlineCount: offline.length,
+      showMembers: s.showMembers, toggleMembers: this.toggleMembers,
+      draft: s.draft, onDraft: this.onDraft, onKey: this.onKey, send: this.send,
+      composerEmoji: this.composerEmoji,
+      goGeneral: this.goGeneral,
+      onLeave: this.onLeave,
+      quickWave: this.quickWave, quickFire: this.quickFire, quickIdea: this.quickIdea,
+      scrollRef: (el) => { this.scrollEl = el; },
+      iconBtn,
+      membersBtn,
+      footBtn: `border:none;background:transparent;cursor:pointer;width:30px;height:30px;border-radius:9px;display:flex;align-items:center;justify-content:center;color:${t.muted};transition:background .15s,color .15s`,
+      composerIcon: `border:none;background:transparent;cursor:pointer;width:36px;height:36px;border-radius:11px;display:flex;align-items:center;justify-content:center;color:${t.muted};transition:background .15s,color .15s`,
+      sendStyle: `border:none;cursor:pointer;width:40px;height:40px;flex:none;border-radius:13px;display:flex;align-items:center;justify-content:center;color:#fff;background:${t.accentGrad};box-shadow:${t.glow};transition:transform .15s,opacity .15s;transform:${canSend ? 'scale(1)' : 'scale(.92)'};opacity:${canSend ? '1' : '.55'}`,
+      quickBtn: `border:1px solid ${t.divider};background:${t.panel};color:${t.text};cursor:pointer;padding:11px 16px;border-radius:13px;font:700 13.5px 'Plus Jakarta Sans';box-shadow:${t.cardShadow};transition:transform .15s`,
+    };
+  }
+}
+</script>
+
+
+</body></html>

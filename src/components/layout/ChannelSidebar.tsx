@@ -1,9 +1,19 @@
-import { Hash, Plus, ChevronDown, Mic, MicOff, Headphones, Settings, LogOut } from 'lucide-react';
+import { Plus, ChevronDown, Mic, Headphones, Settings, LogOut } from 'lucide-react';
 import { useChatStore } from '@/store/chatStore';
 import { useAuthStore } from '@/store/authStore';
 import { Avatar } from '@/components/ui/Avatar';
 import { cn } from '@/lib/utils';
 import { chatWs } from '@/services/websocket';
+
+const CHANNEL_ICONS: Record<string, string> = {
+  general: '💬',
+  ideas: '💡',
+  design: '🎨',
+  gaming: '🎮',
+  music: '🎵',
+  random: '🎲',
+  archive: '📁',
+};
 
 export function ChannelSidebar() {
   const rooms = useChatStore((s) => s.rooms);
@@ -28,48 +38,59 @@ export function ChannelSidebar() {
   }
 
   return (
-    <aside className="w-60 bg-[#161b27] flex flex-col border-r border-[#1e2535]">
+    <aside
+      className="w-60 flex flex-col border-r border-[#1e2333]/60 flex-shrink-0"
+      style={{ background: 'rgba(24, 29, 42, var(--panel-opacity, 0.97))' }}
+    >
       {/* Server name header */}
-      <div className="h-14 flex items-center justify-between px-4 border-b border-[#1e2535] shadow-sm">
-        <span className="font-semibold text-white truncate">Chatrix</span>
-        <ChevronDown size={16} className="text-gray-400 flex-shrink-0" />
+      <div className="h-14 flex items-center justify-between px-4 border-b border-[#1e2333]/60 shadow-sm flex-shrink-0">
+        <div className="flex items-center gap-2">
+          <span className="font-bold text-white truncate">Chatrix</span>
+          <span className="bg-gradient-to-r from-[#ff6b35] to-[#e84393] text-white text-[10px] font-bold px-1.5 py-0.5 rounded-md leading-none tracking-wide">
+            PRO
+          </span>
+        </div>
+        <ChevronDown size={15} className="text-[#5a6480] flex-shrink-0" />
       </div>
 
       {/* Channels */}
       <div className="flex-1 overflow-y-auto py-3">
-        <div className="px-3 mb-1 flex items-center justify-between group">
-          <span className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
+        <div className="px-3 mb-2 flex items-center justify-between group">
+          <span className="text-[11px] font-semibold text-[#5a6480] uppercase tracking-widest">
             Text Channels
           </span>
-          <button className="opacity-0 group-hover:opacity-100 text-gray-400 hover:text-white transition-opacity">
-            <Plus size={14} />
+          <button className="opacity-0 group-hover:opacity-100 text-[#5a6480] hover:text-white transition-all duration-150 hover:bg-[#252b3a] rounded p-0.5">
+            <Plus size={13} />
           </button>
         </div>
 
-        <div className="flex flex-col gap-px px-2">
-          {rooms.map((room) => {
+        <div className="flex flex-col gap-0.5 px-2">
+          {rooms.map((room, i) => {
             const isActive = activeChat?.kind === 'room' && activeChat.roomId === room.id;
+            const icon = CHANNEL_ICONS[room.id] ?? '💬';
             return (
               <button
                 key={room.id}
                 onClick={() => handleSelectRoom(room.id)}
                 className={cn(
-                  'flex items-center gap-2 px-3 py-2 rounded-lg text-sm w-full text-left transition-colors duration-100',
+                  'flex items-center gap-2.5 px-3 py-2 rounded-xl text-sm w-full text-left transition-all duration-150',
+                  'animate-slide-left',
                   isActive
-                    ? 'bg-[#252d3d] text-white'
-                    : 'text-gray-400 hover:bg-[#1e2535] hover:text-gray-200'
+                    ? 'bg-[#ff6b35]/15 text-[#ff8c5a]'
+                    : 'text-[#636b82] hover:bg-[#1e2333]/80 hover:text-[#9ba3b8]'
                 )}
+                style={{ animationDelay: `${i * 30}ms` }}
               >
-                <Hash size={16} className="flex-shrink-0 opacity-60" />
-                <span className="flex-1 truncate">{room.name}</span>
+                <span className="text-base leading-none w-5 text-center">{icon}</span>
+                <span className="flex-1 truncate font-medium">{room.name}</span>
                 <div className="flex items-center gap-1">
                   {room.isNew && (
-                    <span className="bg-orange-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full leading-none">
+                    <span className="bg-[#ff6b35] text-white text-[9px] font-bold px-1.5 py-0.5 rounded-full leading-none">
                       Now
                     </span>
                   )}
                   {(room.unreadCount ?? 0) > 0 && (
-                    <span className="bg-red-500 text-white text-[10px] font-bold min-w-[18px] h-[18px] rounded-full flex items-center justify-center px-1">
+                    <span className="bg-red-500 text-white text-[10px] font-bold min-w-[18px] h-[18px] rounded-full flex items-center justify-center px-1 leading-none">
                       {room.unreadCount}
                     </span>
                   )}
@@ -81,40 +102,43 @@ export function ChannelSidebar() {
       </div>
 
       {/* User panel */}
-      <div className="h-14 bg-[#0f1117] border-t border-[#1e2535] flex items-center px-3 gap-2">
+      <div
+        className="h-14 border-t border-[#1e2333]/60 flex items-center px-3 gap-2 flex-shrink-0"
+        style={{ background: 'rgba(13, 15, 21, var(--panel-opacity, 0.97))' }}
+      >
         <div className="relative">
           <Avatar name={user?.displayName ?? user?.username ?? 'U'} src={user?.avatarUrl} size="sm" />
           <span
             className={cn(
-              'absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full border-2 border-[#0f1117]',
-              wsConnected ? 'bg-green-400' : 'bg-gray-500'
+              'absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full border-2 border-[#13151d] transition-colors duration-300',
+              wsConnected ? 'bg-green-400' : 'bg-[#636b82]'
             )}
           />
         </div>
         <div className="flex-1 min-w-0">
-          <p className="text-sm font-medium text-white truncate leading-tight">
+          <p className="text-sm font-semibold text-white truncate leading-tight">
             {user?.displayName ?? user?.username}
           </p>
-          <p className="text-xs text-gray-500 truncate">
+          <p className={cn('text-xs truncate transition-colors duration-300', wsConnected ? 'text-green-400' : 'text-[#636b82]')}>
             {wsConnected ? 'Online' : 'Connecting...'}
           </p>
         </div>
-        <div className="flex items-center gap-1">
-          <button className="p-1.5 text-gray-400 hover:text-white hover:bg-[#252d3d] rounded-lg transition-colors">
-            <Mic size={16} />
+        <div className="flex items-center gap-0.5">
+          <button className="p-1.5 text-[#636b82] hover:text-white hover:bg-[#252b3a] rounded-lg transition-all duration-150" title="Microphone">
+            <Mic size={15} />
           </button>
-          <button className="p-1.5 text-gray-400 hover:text-white hover:bg-[#252d3d] rounded-lg transition-colors">
-            <Headphones size={16} />
+          <button className="p-1.5 text-[#636b82] hover:text-white hover:bg-[#252b3a] rounded-lg transition-all duration-150" title="Headphones">
+            <Headphones size={15} />
           </button>
-          <button className="p-1.5 text-gray-400 hover:text-white hover:bg-[#252d3d] rounded-lg transition-colors">
-            <Settings size={16} />
+          <button className="p-1.5 text-[#636b82] hover:text-white hover:bg-[#252b3a] rounded-lg transition-all duration-150" title="Settings">
+            <Settings size={15} />
           </button>
           <button
             onClick={handleLogout}
-            className="p-1.5 text-gray-400 hover:text-red-400 hover:bg-[#252d3d] rounded-lg transition-colors"
+            className="p-1.5 text-[#636b82] hover:text-red-400 hover:bg-[#252b3a] rounded-lg transition-all duration-150"
             title="Sign out"
           >
-            <LogOut size={16} />
+            <LogOut size={15} />
           </button>
         </div>
       </div>
@@ -122,4 +146,3 @@ export function ChannelSidebar() {
   );
 }
 
-export { MicOff };

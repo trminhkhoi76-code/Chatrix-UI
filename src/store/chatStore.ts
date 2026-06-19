@@ -28,12 +28,12 @@ interface ChatState {
 export const useChatStore = create<ChatState>((set) => ({
   rooms: [
     { id: 'general', name: 'general', isNew: true },
-    { id: 'server-11', name: 'Server 11' },
-    { id: 'server-2', name: 'Server 2' },
-    { id: 'server-3', name: 'Server 3' },
-    { id: 'server-4', name: 'Server 4' },
-    { id: 'server-8', name: 'Server 8' },
-    { id: 'server-10', name: 'Server 10' },
+    { id: 'ideas', name: 'ideas' },
+    { id: 'design', name: 'design' },
+    { id: 'gaming', name: 'gaming', unreadCount: 3 },
+    { id: 'music', name: 'music' },
+    { id: 'random', name: 'random' },
+    { id: 'archive', name: 'archive' },
   ],
   conversations: [],
   activeChat: { kind: 'room', roomId: 'general' },

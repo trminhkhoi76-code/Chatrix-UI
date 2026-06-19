@@ -79,6 +79,7 @@ export interface ChatMessage {
   // client-side only fields
   id?: string;
   isOwn?: boolean;
+  reactions?: { emoji: string; count: number; reacted?: boolean }[];
 }
 
 // ─── UI State ─────────────────────────────────────────────────────────────────

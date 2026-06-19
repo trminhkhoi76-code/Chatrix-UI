@@ -1,5 +1,5 @@
 import { useState, useRef, type FormEvent, type KeyboardEvent } from 'react';
-import { Paperclip, Smile, Send } from 'lucide-react';
+import { Paperclip, Send } from 'lucide-react';
 import { useChatStore } from '@/store/chatStore';
 import { useAuthStore } from '@/store/authStore';
 import { chatWs } from '@/services/websocket';
@@ -79,17 +79,17 @@ export function MessageInput() {
   }
 
   return (
-    <div className="px-4 pb-4 flex-shrink-0">
+    <div className="px-4 pb-5 pt-2 flex-shrink-0">
       <form
         onSubmit={handleSubmit}
-        className="flex items-end gap-2 bg-[#1e2535] rounded-2xl border border-[#2e3850] px-4 py-3"
+        className="flex items-end gap-2 bg-[#1e2333] rounded-2xl border border-[#252b3a] px-4 py-3 shadow-lg shadow-black/20 focus-within:border-[#ff6b35]/30 transition-colors duration-200"
       >
         {/* File attach */}
         <button
           type="button"
           onClick={() => fileRef.current?.click()}
           disabled={uploading}
-          className="p-1.5 text-gray-400 hover:text-orange-400 transition-colors flex-shrink-0"
+          className="p-1.5 text-[#636b82] hover:text-[#ff8c5a] transition-colors flex-shrink-0"
         >
           <Paperclip size={18} className={uploading ? 'animate-pulse' : ''} />
         </button>
@@ -110,7 +110,7 @@ export function MessageInput() {
           disabled={false}
           rows={1}
           className={cn(
-            'flex-1 bg-transparent text-white placeholder-gray-500 text-sm resize-none',
+            'flex-1 bg-transparent text-[#eef0f5] placeholder-[#636b82] text-sm resize-none',
             'focus:outline-none max-h-32 leading-relaxed'
           )}
           style={{ height: 'auto' }}
@@ -124,9 +124,10 @@ export function MessageInput() {
         {/* Emoji */}
         <button
           type="button"
-          className="p-1.5 text-gray-400 hover:text-yellow-400 transition-colors flex-shrink-0"
+          className="p-1.5 text-[#636b82] hover:text-yellow-400 transition-colors flex-shrink-0 text-lg leading-none"
+          title="Emoji"
         >
-          <Smile size={18} />
+          😊
         </button>
 
         {/* Send */}
@@ -134,13 +135,13 @@ export function MessageInput() {
           type="submit"
           disabled={!content.trim() && !uploading}
           className={cn(
-            'p-2 rounded-xl transition-all duration-150 flex-shrink-0',
+            'w-9 h-9 rounded-xl transition-all duration-150 flex items-center justify-center flex-shrink-0',
             content.trim()
-              ? 'bg-orange-500 hover:bg-orange-600 text-white shadow-lg shadow-orange-500/30'
-              : 'text-gray-600'
+              ? 'bg-gradient-to-br from-[#ff6b35] to-[#e8503a] text-white shadow-lg shadow-[#ff6b35]/30 hover:shadow-[#ff6b35]/50 hover:scale-105 active:scale-95'
+              : 'bg-[#252b3a] text-[#5a6480] cursor-not-allowed'
           )}
         >
-          <Send size={16} />
+          <Send size={15} />
         </button>
       </form>
     </div>

@@ -47,19 +47,23 @@ export default function LoginPage() {
   });
 
   return (
-    <div className="min-h-screen bg-[#0f1117] flex items-center justify-center p-4">
-      <div className="w-full max-w-md">
+    <div className="min-h-screen bg-[#13151d] flex items-center justify-center p-4 relative overflow-hidden">
+      {/* Background blobs */}
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#ff6b35]/8 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#a855f7]/8 rounded-full blur-3xl pointer-events-none" />
+
+      <div className="w-full max-w-md animate-slide-up">
         {/* Logo */}
         <div className="flex flex-col items-center mb-8">
-          <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-orange-500 to-purple-600 flex items-center justify-center mb-4 shadow-lg shadow-orange-500/30">
-            <span className="text-2xl font-bold text-white">C</span>
+          <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#ff6b35] to-[#e84393] flex items-center justify-center mb-4 shadow-2xl shadow-[#ff6b35]/30 animate-pulse-glow">
+            <span className="text-3xl font-extrabold text-white leading-none">C</span>
           </div>
-          <h1 className="text-2xl font-bold text-white">Welcome back to Chatrix</h1>
-          <p className="text-gray-400 text-sm mt-1">Sign in to continue chatting</p>
+          <h1 className="text-2xl font-extrabold text-white">Welcome back to Chatrix</h1>
+          <p className="text-[#636b82] text-sm mt-1">Sign in to continue chatting</p>
         </div>
 
         {/* Card */}
-        <div className="bg-[#161b27] border border-[#252d3d] rounded-2xl p-8 shadow-2xl">
+        <div className="bg-[#181d2a] border border-[#252b3a] rounded-2xl p-8 shadow-2xl shadow-black/40">
           <form onSubmit={handleSubmit((v) => mutation.mutate(v))} className="flex flex-col gap-5">
             <Input
               label="Username"
@@ -78,7 +82,7 @@ export default function LoginPage() {
             />
 
             {errors.root && (
-              <div className="bg-red-500/10 border border-red-500/30 rounded-xl px-4 py-3 text-sm text-red-400">
+              <div className="bg-red-500/10 border border-red-500/30 rounded-xl px-4 py-3 text-sm text-red-400 animate-fade-in">
                 {errors.root.message}
               </div>
             )}
@@ -88,9 +92,9 @@ export default function LoginPage() {
             </Button>
           </form>
 
-          <p className="text-center text-sm text-gray-500 mt-6">
+          <p className="text-center text-sm text-[#636b82] mt-6">
             Don't have an account?{' '}
-            <Link to="/register" className="text-orange-400 hover:text-orange-300 font-medium">
+            <Link to="/register" className="text-[#ff8c5a] hover:text-[#ff6b35] font-semibold transition-colors">
               Sign up
             </Link>
           </p>

@@ -21,9 +21,9 @@ export function Button({
     'inline-flex items-center justify-center gap-2 font-medium rounded-xl transition-all duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500';
 
   const variants = {
-    primary: 'bg-orange-500 hover:bg-orange-600 active:bg-orange-700 text-white shadow-lg shadow-orange-500/25',
-    secondary: 'bg-[#252d3d] hover:bg-[#2e3850] text-white border border-[#3d4a63]',
-    ghost: 'bg-transparent hover:bg-[#252d3d] text-gray-300 hover:text-white',
+    primary: 'bg-gradient-to-br from-[#ff6b35] to-[#e8503a] hover:from-[#ff7a45] hover:to-[#f0603a] active:scale-95 text-white shadow-lg shadow-[#ff6b35]/25',
+    secondary: 'bg-[#252b3a] hover:bg-[#2e3649] text-white border border-[#3d4660]',
+    ghost: 'bg-transparent hover:bg-[#252b3a] text-[#9ba3b8] hover:text-white',
     danger: 'bg-red-600 hover:bg-red-700 text-white',
   };
 

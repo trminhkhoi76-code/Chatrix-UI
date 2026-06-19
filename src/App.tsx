@@ -4,6 +4,7 @@ import { ProtectedRoute, PublicOnlyRoute } from '@/components/auth/ProtectedRout
 import LoginPage from '@/pages/LoginPage';
 import RegisterPage from '@/pages/RegisterPage';
 import ChatPage from '@/pages/ChatPage';
+import AdminPage from '@/pages/AdminPage';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -22,6 +23,7 @@ export default function App() {
           </Route>
           <Route element={<ProtectedRoute />}>
             <Route path="/" element={<ChatPage />} />
+            <Route path="/admin" element={<AdminPage />} />
           </Route>
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>

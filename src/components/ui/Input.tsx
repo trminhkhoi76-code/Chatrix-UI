@@ -24,8 +24,8 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
           <input
             ref={ref}
             className={cn(
-              'w-full bg-[#1e2535] border border-[#3d4a63] text-white placeholder-gray-500 rounded-xl px-4 py-2.5 text-sm',
-              'focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500',
+              'w-full bg-[#1e2333] border border-[#252b3a] text-[#eef0f5] placeholder-[#636b82] rounded-xl px-4 py-2.5 text-sm',
+              'focus:outline-none focus:border-[#ff6b35]/60 focus:ring-1 focus:ring-[#ff6b35]/30',
               'transition-colors duration-150',
               leftIcon && 'pl-10',
               error && 'border-red-500 focus:border-red-500 focus:ring-red-500',

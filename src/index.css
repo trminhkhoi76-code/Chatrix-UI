@@ -1,5 +1,6 @@
 ﻿@import "tailwindcss";
 
+/* ─── Design tokens ──────────────────────────────────────────────────────── */
 @theme {
   --color-brand: #ff6b35;
   --color-brand-dark: #e85a25;
@@ -7,17 +8,23 @@
   --color-accent-dark: #9333ea;
   --color-pink: #ec4899;
 
-  --color-dark-900: #0f1117;
-  --color-dark-800: #161b27;
-  --color-dark-700: #1e2535;
-  --color-dark-600: #252d3d;
-  --color-dark-500: #2e3850;
-  --color-dark-400: #3d4a63;
+  --color-dark-900: #13151d;
+  --color-dark-800: #181d2a;
+  --color-dark-700: #1e2333;
+  --color-dark-600: #252b3a;
+  --color-dark-500: #2e3649;
+  --color-dark-400: #3d4660;
   --color-dark-300: #5a6480;
 
-  --color-text-primary: #f0f2f5;
-  --color-text-secondary: #a0aec0;
-  --color-text-muted: #6b7280;
+  --color-text-primary: #eef0f5;
+  --color-text-secondary: #9ba3b8;
+  --color-text-muted: #636b82;
+}
+
+/* ─── Custom properties for opacity control ────────────────────────────── */
+:root {
+  --panel-opacity: 0.97;
+  --sidebar-blur: 12px;
 }
 
 *, *::before, *::after {
@@ -28,23 +35,71 @@ html, body, #root {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #0f1117;
-  color: #f0f2f5;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background-color: #13151d;
+  color: #eef0f5;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
-::-webkit-scrollbar {
-  width: 4px;
-  height: 4px;
+/* ─── Scrollbar ──────────────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #2e3649; border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: #3d4660; }
+
+/* ─── Global animations ──────────────────────────────────────────────────── */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
-::-webkit-scrollbar-track {
-  background: transparent;
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
-::-webkit-scrollbar-thumb {
-  background: #2e3850;
-  border-radius: 2px;
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-12px); }
+  to   { opacity: 1; transform: translateX(0); }
 }
-::-webkit-scrollbar-thumb:hover {
-  background: #3d4a63;
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(12px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes popIn {
+  0%   { opacity: 0; transform: scale(0.92); }
+  70%  { transform: scale(1.04); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 107, 53, 0.4); }
+  50%       { box-shadow: 0 0 0 6px rgba(255, 107, 53, 0); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* ─── Animation utilities ───────────────────────────────────────────────── */
+.animate-fade-in     { animation: fadeIn 0.3s ease forwards; }
+.animate-slide-up    { animation: slideUp 0.35s cubic-bezier(.22,1,.36,1) forwards; }
+.animate-slide-left  { animation: slideInLeft 0.3s cubic-bezier(.22,1,.36,1) forwards; }
+.animate-slide-right { animation: slideInRight 0.3s cubic-bezier(.22,1,.36,1) forwards; }
+.animate-pop-in      { animation: popIn 0.3s cubic-bezier(.22,1,.36,1) forwards; }
+.animate-pulse-glow  { animation: pulse-glow 2s ease-in-out infinite; }
+
+/* ─── Message bubble animation ──────────────────────────────────────────── */
+.msg-enter {
+  animation: popIn 0.25s cubic-bezier(.22,1,.36,1) forwards;
+}
+
+/* ─── Glassmorphism panel ────────────────────────────────────────────────── */
+.glass-panel {
+  background: rgba(24, 29, 42, var(--panel-opacity));
+  backdrop-filter: blur(var(--sidebar-blur));
+  -webkit-backdrop-filter: blur(var(--sidebar-blur));
 }

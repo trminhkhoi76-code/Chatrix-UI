@@ -43,7 +43,7 @@ export function Avatar({ src, name, size = 'md', online, className }: AvatarProp
           className={cn(
             'absolute bottom-0 right-0 rounded-full border-2 border-[#161b27]',
             size === 'sm' ? 'w-2 h-2' : 'w-2.5 h-2.5',
-            online ? 'bg-green-400' : 'bg-gray-500'
+            online ? 'bg-green-400' : 'bg-[#636b82]'
           )}
         />
       )}

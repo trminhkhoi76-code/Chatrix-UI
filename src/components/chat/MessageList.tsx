@@ -3,7 +3,6 @@ import { useChatStore } from '@/store/chatStore';
 import { MessageBubble } from './MessageBubble';
 import { formatDate } from '@/lib/utils';
 import type { ChatMessage } from '@/types';
-import { Hash } from 'lucide-react';
 
 export function MessageList() {
   const activeChat = useChatStore((s) => s.activeChat);
@@ -26,7 +25,7 @@ export function MessageList() {
 
   if (!activeChat) {
     return (
-      <div className="flex-1 flex items-center justify-center text-gray-500">
+      <div className="flex-1 flex items-center justify-center text-[#636b82] text-sm">
         Select a channel to start chatting
       </div>
     );
@@ -41,14 +40,16 @@ export function MessageList() {
     <div className="flex-1 overflow-y-auto flex flex-col py-4">
       {/* Channel welcome */}
       {msgs.length === 0 && (
-        <div className="flex flex-col items-center justify-center flex-1 gap-3 text-center px-8">
-          <div className="w-16 h-16 rounded-full bg-[#252d3d] flex items-center justify-center">
-            <Hash size={28} className="text-gray-400" />
+        <div className="flex flex-col items-center justify-center flex-1 gap-4 text-center px-8 animate-fade-in">
+          <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#ff6b35]/20 to-[#a855f7]/20 border border-[#ff6b35]/20 flex items-center justify-center text-3xl">
+            💬
           </div>
-          <h3 className="text-xl font-bold text-white">Welcome to #{roomName ?? 'chat'}!</h3>
-          <p className="text-gray-400 text-sm max-w-sm">
-            This is the beginning of the <strong>#{roomName ?? 'chat'}</strong> channel. Say hi!
-          </p>
+          <div>
+            <h3 className="text-xl font-bold text-white mb-1">Welcome to #{roomName ?? 'chat'}!</h3>
+            <p className="text-[#636b82] text-sm max-w-sm">
+              This is the beginning of the <strong className="text-[#9ba3b8]">#{roomName ?? 'chat'}</strong> channel. Say hi!
+            </p>
+          </div>
         </div>
       )}
 
@@ -67,10 +68,12 @@ export function MessageList() {
         return (
           <div key={msg.id ?? i}>
             {showDate && msg.timestamp && (
-              <div className="flex items-center gap-3 px-4 my-3">
-                <div className="flex-1 h-px bg-[#252d3d]" />
-                <span className="text-xs text-gray-500 font-medium">{formatDate(msg.timestamp)}</span>
-                <div className="flex-1 h-px bg-[#252d3d]" />
+              <div className="flex items-center gap-3 px-6 my-4">
+                <div className="flex-1 h-px bg-[#252b3a]" />
+                <span className="text-[11px] text-[#5a6480] font-semibold uppercase tracking-wider bg-[#13151d] px-3 py-1 rounded-full border border-[#252b3a]">
+                  {formatDate(msg.timestamp)}
+                </span>
+                <div className="flex-1 h-px bg-[#252b3a]" />
               </div>
             )}
             <MessageBubble message={msg} showSender={showSender} />
@@ -81,3 +84,4 @@ export function MessageList() {
     </div>
   );
 }
+
